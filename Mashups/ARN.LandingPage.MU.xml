@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description="ThingWorx Navigate Home page."
+         documentationContent=""
+         homeMashup=""
+         name="ARN.LandingPage.MU"
+         projectName="Arorian"
+         rows="0.0"
+         tags="TWXNavigate:Navigate;PTC:Navigate;PTC:ROLE_BASED_APPS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "@import \"/Thingworx/extensions/Navigate_CssFiles/resources/css/LandingPageAccessAppMashup.css\";",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_AppCollectionsConsolidator" : {
+                  "DataName" : "Things_AppCollectionsConsolidator",
+                  "EntityName" : "AppCollectionsConsolidator",
+                  "EntityType" : "Things",
+                  "Id" : "01c3394e-34c3-4e6c-af21-4650084454f2",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "851ab35a-e8a4-470a-8dfb-48df30b6a1a6",
+                    "Name" : "CollectApps",
+                    "Parameters" : { },
+                    "Properties" : {
+                      "CustomErrorMessage" : "[server-message]",
+                      "ShowErrorMessage" : false
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "CollectApps"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "5f1a793f-bb05-4781-942b-32f403b11650",
+                    "Name" : "isCollectAppsEmpty",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "isCollectAppsEmpty"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "d3a09081-62ae-4b9a-ab14-3cb0edb68075",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "MashupName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Field"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-88",
+                "SourceSection" : "",
+                "TargetArea" : "Session",
+                "TargetId" : "Session",
+                "TargetSection" : "Session"
+              }, {
+                "Id" : "ccbf2a16-6d7c-4ac4-aa73-83c06c79f47f",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "CollectApps",
+                "SourceSection" : "Things_AppCollectionsConsolidator",
+                "TargetArea" : "UI",
+                "TargetId" : "repeater-103",
+                "TargetSection" : ""
+              }, {
+                "Id" : "bcb926de-b684-48cd-9d71-7e641743a2cb",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Data",
+                  "TargetProperty" : "isCollectAppsEmpty",
+                  "TargetPropertyBaseType" : "BOOLEAN"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "isCollectAppsEmpty",
+                "SourceSection" : "Things_AppCollectionsConsolidator",
+                "TargetArea" : "UI",
+                "TargetId" : "validator-9",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AppCollectionsConsolidator",
+                "EventHandlerService" : "CollectApps",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator-9",
+                "EventTriggerSection" : "",
+                "Id" : "dd357364-acb1-4e2c-a759-76d1da7e923a"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "container-101",
+                "EventHandlerService" : "Expand",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator-9",
+                "EventTriggerSection" : "",
+                "Id" : "9e62de58-1b33-4750-a7d9-96ed0eb412e0"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AppCollectionsConsolidator",
+                "EventHandlerService" : "isCollectAppsEmpty",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "6aaf7581-9cf7-4bca-9e9a-3309adfb776d"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator-9",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "isCollectAppsEmpty",
+                "EventTriggerSection" : "Things_AppCollectionsConsolidator",
+                "Id" : "0e73ab13-335c-4794-bfa7-cc64e9f6ad24"
+              } ],
+              "Reminders" : [ ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "CSSFile" : "",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "CustomClass" : "",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "LegacyFocus" : true,
+                  "Margin" : "5",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "Master" : "PTC.Nav.LandingPage.Master",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "RepeaterCellStyle",
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "features" : {
+                    "validator-migration" : true
+                  },
+                  "id_index" : 104,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CenterCustomClass" : "landing-page-layout-center",
+                    "Columns" : 0,
+                    "DisplayName" : "Layout-1",
+                    "Footer" : false,
+                    "FooterHeight" : 0,
+                    "Header" : true,
+                    "HeaderHeight" : 100,
+                    "Id" : "Layout-1",
+                    "IncludeSpacingInFixedAreas" : false,
+                    "IsPrintLayout" : false,
+                    "LastContainer" : false,
+                    "Left" : 235,
+                    "LeftSidebar" : false,
+                    "LeftSidebarWidth" : 0,
+                    "Margin" : "5",
+                    "Orientation" : "vertical",
+                    "PctColumn1" : 50,
+                    "PctColumn2" : 50,
+                    "PctColumn3" : 1,
+                    "PctColumn4" : 1,
+                    "PctColumn5" : 1,
+                    "PctColumn6" : 1,
+                    "PctColumn7" : 1,
+                    "PctColumn8" : 1,
+                    "PctRow1" : 100,
+                    "PctRow2" : 0,
+                    "PctRow3" : 0,
+                    "PctRow4" : 0,
+                    "PctRow5" : 0,
+                    "PctRow6" : 0,
+                    "PctRow7" : 0,
+                    "PctRow8" : 0,
+                    "PrintMarginLeftRight" : 0.5,
+                    "PrintMarginTopBottom" : 0.5,
+                    "PrintWidth" : 650,
+                    "ResponsiveLayout" : true,
+                    "RightSidebar" : false,
+                    "RightSidebarWidth" : 0,
+                    "Rows" : 1,
+                    "ShowDataLoading" : true,
+                    "Spacing" : 0,
+                    "Top" : 185,
+                    "Type" : "layout",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Layout"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Header",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : false,
+                      "Id" : "container-101",
+                      "LastContainer" : false,
+                      "Margin" : "5",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : false,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container",
+                      "userCannotRemove" : true
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ContainerClass" : "",
+                        "DisplayName" : "panel-102",
+                        "Height" : 200,
+                        "HideScrollbars" : false,
+                        "HorizontalAnchor" : "left",
+                        "Id" : "panel-102",
+                        "LastContainer" : false,
+                        "Left" : 315,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Style" : "DefaultContainerStyle",
+                        "Top" : 55,
+                        "Type" : "panel",
+                        "VerticalAnchor" : "top",
+                        "Visible" : true,
+                        "Width" : 300,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Panel"
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CursorPosition" : 0,
+                          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                          "Description" : "",
+                          "DisplayName" : "LandingPageLogo Textbox",
+                          "Height" : 24,
+                          "Id" : "Textbox-88",
+                          "InnerShadow" : true,
+                          "Label" : "",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 10,
+                          "Margin" : "5",
+                          "MaskInputCharacters" : false,
+                          "PlaceholderText" : "",
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : {
+                            "backgroundColor" : "",
+                            "displayString" : "",
+                            "fontEmphasisBold" : false,
+                            "fontEmphasisItalic" : false,
+                            "fontEmphasisUnderline" : false,
+                            "foregroundColor" : "",
+                            "image" : "",
+                            "lineColor" : "",
+                            "lineStyle" : "solid",
+                            "lineThickness" : 1,
+                            "secondaryBackgroundColor" : "",
+                            "textSize" : "normal"
+                          },
+                          "TabSequence" : 0,
+                          "Text" : "",
+                          "TextAlign" : "left",
+                          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 10,
+                          "Type" : "textbox",
+                          "Visible" : false,
+                          "Width" : 200,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Textbox",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllowEllipsis" : false,
+                          "Area" : "UI",
+                          "CustomClass" : "",
+                          "Description" : "",
+                          "DisplayName" : "user permission error msg Label",
+                          "Height" : 20,
+                          "Id" : "label-104",
+                          "LastContainer" : false,
+                          "Left" : 520,
+                          "Margin" : "5",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "PTC.AccessApp.16px.TitleSmall.DarkGray",
+                          "Text" : "[[PTC.AccessApp.AppPermissionsNotAvailable]]",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 60,
+                          "Type" : "label",
+                          "Visible" : true,
+                          "Width" : 730,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Label",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "AlternateText" : "",
+                          "Area" : "UI",
+                          "BorderStyle" : "DefaultImageBorderStyle",
+                          "CustomClass" : "",
+                          "DisplayName" : "image-1",
+                          "Height" : 30,
+                          "Id" : "image-1",
+                          "LastContainer" : false,
+                          "Left" : 485,
+                          "Margin" : "5",
+                          "PreventCaching" : false,
+                          "ResponsiveLayout" : false,
+                          "Scaling" : "width",
+                          "ShowDataLoading" : true,
+                          "SourceURL" : "PTC.AccessApp.StatusWarning",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 53,
+                          "Type" : "image",
+                          "Visible" : true,
+                          "Width" : 30,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Image",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Row 1",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : true,
+                      "Id" : "container-3",
+                      "LastContainer" : false,
+                      "Margin" : "5",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container",
+                      "userCannotRemove" : true
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "AllowSelection" : false,
+                        "Area" : "UI",
+                        "AutoSelectFirstRow" : false,
+                        "CustomClass" : "collection-rep",
+                        "DisplayName" : "repeater-103",
+                        "FixedMashupHeight" : 280,
+                        "FixedMashupWidth" : 200,
+                        "Height" : 300,
+                        "HideInnerScrollbars" : false,
+                        "Id" : "repeater-103",
+                        "ItemLoadBehavior" : "load-all",
+                        "LastContainer" : false,
+                        "Left" : 415,
+                        "Margin" : "5",
+                        "Mashup" : "AppCollectionMashup",
+                        "MashupHeight" : 200,
+                        "MashupParameters" : [ {
+                          "BaseType" : "INFOTABLE",
+                          "Description" : "",
+                          "ParameterName" : "dataFromLandingPage"
+                        } ],
+                        "MashupWidth" : 200,
+                        "RepeaterCellStyle" : "PTC.AccessApp.RepeaterCellStyle",
+                        "RepeaterSelectedStyle" : "DefaultRepeaterSelectedStyle",
+                        "RepeaterStyle" : "PTC.AccessApp.RepeaterTransparent",
+                        "RepeaterUnselectedStyle" : "DefaultRepeaterUnselectedStyle",
+                        "ResponsiveLayout" : true,
+                        "ReuseMashups" : true,
+                        "SelectionHeight" : 25,
+                        "SelectionWidth" : 25,
+                        "ShowDataLoading" : true,
+                        "Top" : 215,
+                        "Type" : "repeater",
+                        "View" : "vertical",
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Repeater",
+                        "dataFromLandingPage" : "ALL_FIELDS"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "Description" : "",
+                    "DisplayName" : "collect apps validator",
+                    "Expression" : "result = isCollectAppsEmpty;",
+                    "Height" : 10,
+                    "Id" : "validator-9",
+                    "LastContainer" : false,
+                    "Left" : 10,
+                    "Margin" : "5",
+                    "Output" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 10,
+                    "Type" : "validator",
+                    "Visible" : true,
+                    "Width" : 10,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "Description" : "",
+                      "ParameterName" : "isCollectAppsEmpty"
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

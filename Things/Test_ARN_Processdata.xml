@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="Test_ARN_Processdata"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlanData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjectPlans">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="processPlanData">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         aspect.dataShape="GenericNameValueCategoryDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="testCopy">
+                        <ResultType
+                         aspect.dataShape="GenericNameValueCategoryDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlanData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let params = {
+                                        	proxyScheme: undefined /* STRING {"defaultValue":"http"} */,
+                                        	headers: Header /* JSON */,
+                                        	ignoreSSLErrors: true /* BOOLEAN */,
+                                        	url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015&u8=1&AjaxEnabled=thirdLevelNav" /* STRING */,
+                                        	content: undefined /* STRING */,
+                                        	timeout: 300 /* NUMBER {"defaultValue":60} */
+                                        };
+                                        
+                                        // result: STRING
+                                        let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjectPlans">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let params = {
+                                        	proxyScheme: undefined /* STRING {"defaultValue":"http"} */,
+                                        	headers: Header /* JSON */,
+                                        	ignoreSSLErrors: true /* BOOLEAN */,
+                                        	url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.plan.plansTable?ContainerOid=OR%3Awt.projmgmt.admin.Project2%3A3303837&oid=OR%3Awt.projmgmt.admin.Project2%3A3303837&u8=1&portlet=component" /* STRING */,
+                                        	content: undefined /* STRING */,
+                                        	timeout: 300 /* NUMBER {"defaultValue":60} */
+                                        };
+                                        
+                                        // result: STRING
+                                        let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="processPlanData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let htmlContent = me.getPlanData();
+                                        
+                                        var start = htmlContent.indexOf('{');
+                                        var openBraces = 0;
+                                        var end = -1;
+                                        
+                                        for (var i = start; i < htmlContent.length; i++) {
+                                        	var char = htmlContent.charAt(i);
+                                        	if (char === '{') openBraces++;
+                                        	else if (char === '}') openBraces--;
+                                        
+                                        	if (openBraces === 0 && start !== -1) {
+                                        		end = i;
+                                        		break;
+                                        	}
+                                        }
+                                        
+                                        if (start !== -1 && end !== -1) {
+                                        	var jsonText = htmlContent.substring(start, end + 1); // Extract clean JSON portion
+                                        
+                                        	logger.warn("Extracted JSON text: " + jsonText);
+                                        
+                                        	try {
+                                        		var parsed = JSON.parse(jsonText);
+                                        		var groups = parsed.groups;
+                                        		
+                                        		result = groups; 
+                                        
+                                        	} catch (err) {
+                                        		logger.error("JSON parsing failed: " + err.message);
+                                        		result = null;
+                                        	}
+                                        } else {
+                                        	logger.warn("ap.init() block not found or JSON is malformed.");
+                                        	result = null;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let jsonData = me.processPlanData(); // Parsed JSON object
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "GenericNameValueCategoryDS"
+                                        });
+                                        
+                                        if (jsonData && jsonData.array && Array.isArray(jsonData.array)) {
+                                            let groups = jsonData.array;
+                                        
+                                            for (let g = 0; g < groups.length; g++) {
+                                                let group = groups[g];
+                                                let groupLabel = group.label || "";
+                                        
+                                                if (group.rows && Array.isArray(group.rows)) {
+                                                    for (let r = 0; r < group.rows.length; r++) {
+                                                        let row = group.rows[r];
+                                        
+                                                        if (row.columns && Array.isArray(row.columns)) {
+                                                            for (let c = 0; c < row.columns.length; c++) {
+                                                                let column = row.columns[c];
+                                                                let name = column.label || "";
+                                                                let value = "";
+                                        
+                                                                if (column.value) {
+                                                                    if (typeof column.value === "string") {
+                                                                        value = column.value;
+                                                                    } else if (column.value.gui) {
+                                                                        if (column.value.gui.displayValue !== undefined) {
+                                                                            value = column.value.gui.displayValue.toString();
+                                                                        } else if (column.value.gui.export_value !== undefined) {
+                                                                            value = column.value.gui.export_value.toString();
+                                                                        } else if (column.value.gui.html !== undefined) {
+                                                                            value = column.value.gui.html.toString();
+                                                                        }
+                                                                    }
+                                                                }
+                                        
+                                                                resultTable.AddRow({
+                                                                    Name: name,
+                                                                    Value: value,
+                                                                    Category: groupLabel
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        } else {
+                                            logger.warn("array not found ");
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="testCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let jsonData = me.processPlanData(); // Parsed JSON object
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "GenericNameValueCategoryDS"
+                                        });
+                                        
+                                        if (jsonData && jsonData.array && Array.isArray(jsonData.array)) {
+                                            let groups = jsonData.array;
+                                        
+                                            for (let g = 0; g < groups.length; g++) {
+                                                let group = groups[g];
+                                                let groupLabel = group.label || "";
+                                        
+                                                if (group.rows && Array.isArray(group.rows)) {
+                                                    for (let r = 0; r < group.rows.length; r++) {
+                                                        let row = group.rows[r];
+                                        
+                                                        if (row.columns && Array.isArray(row.columns)) {
+                                                            for (let c = 0; c < row.columns.length; c++) {
+                                                                let column = row.columns[c];
+                                                                let name = column.label || "";
+                                                                let value = "";
+                                        
+                                                                if (column.value) {
+                                                                    if (typeof column.value === "string") {
+                                                                        value = column.value;
+                                                                    } else if (column.value.gui) {
+                                                                        if (column.value.gui.displayValue !== undefined) {
+                                                                            value = column.value.gui.displayValue.toString();
+                                                                        } else if (column.value.gui.export_value !== undefined) {
+                                                                            value = column.value.gui.export_value.toString();
+                                                                        } else if (column.value.gui.html !== undefined) {
+                                                                            value = column.value.gui.html.toString();
+                                                                        }
+                                                                    }
+                                                                }
+                                        
+                                                                resultTable.AddRow({
+                                                                    Name: name,
+                                                                    Value: value,
+                                                                    Category: groupLabel
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        } else {
+                                            logger.warn("⚠️ 'array' not found or not an array in processPlanData result.");
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

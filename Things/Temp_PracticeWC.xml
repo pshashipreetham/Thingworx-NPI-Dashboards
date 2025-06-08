@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="Temp_PracticeWC"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="IndustrialGatewayDiagnosticStream">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CombinedIncubationDataInfotable">
+                        <ResultType
+                         aspect.dataShape="IncubationDetailsDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CombinedIncubationHTMLData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAttributesHTMLData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCalculatedTAT">
+                        <ResultType
+                         aspect.dataShape="ARN.TAT.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="equipmentInput"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ProductCategory"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDetailsHTMLData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocHistoryDetails">
+                        <ResultType
+                         aspect.dataShape="DocHistoryDetailsDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocName">
+                        <ResultType
+                         aspect.dataShape="IncubationNameShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getHistoryHTMLData">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getIncubationTimeDiff">
+                        <ResultType
+                         aspect.dataShape="IncubationTimeDiffDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="NamedHoursDifference">
+                        <ResultType
+                         aspect.dataShape="NamedHoursDifferenceDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         aspect.dataShape="test2"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ProductCategory"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="testCopy">
+                        <ResultType
+                         aspect.dataShape="test2"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="testCopyCopy">
+                        <ResultType
+                         aspect.dataShape="test2"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="testCopyCopyCopy">
+                        <ResultType
+                         aspect.dataShape="test2"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CombinedIncubationDataInfotable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "IncubationDetailsDataShape" 
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        function parseFieldsFromHTML(htmlContent) {
+                                            let row = {};
+                                        
+                                            let modifiedByMatch = htmlContent.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"(.*?)"/);  
+                                            row.modifiedBy = modifiedByMatch ? modifiedByMatch[1].replace(/&nbsp;/g, '').trim() : "";  
+                                        //    if (row.modifiedBy) {
+                                        //        row.modifiedBy = row.modifiedBy.replace(/livadmin\s+/i, "").trim();
+                                        //    }
+                                        
+                                            let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);  
+                                            row.lastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : ""; 
+                                           
+                                            let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                            row.state = stateMatch ? stateMatch[1].trim() : "";  
+                                        
+                                            let incubationNameMatch = htmlContent.match(/"displayIdentifier":\s*"([^"]+)"/);
+                                            row.incubationName = incubationNameMatch ? incubationNameMatch[1].split(",")[0].trim() : "";  
+                                        
+                                            let productCategoryMatch = htmlContent.match(/"Product Category"\s*,\s*"value"\s*:\s*"([^"]+)"/);
+                                            row.productCategory = productCategoryMatch ? productCategoryMatch[1].trim() : "";
+                                        
+                                            return row;
+                                        }
+                                        
+                                        // Split and filter HTML chunks
+                                        let htmlContent = me.CombinedIncubationHTMLData();
+                                        let docChunks = htmlContent.split(/(?="displayIdentifier":)/).filter(chunk => chunk.includes("displayIdentifier"));
+                                        
+                                        // Parse and add only valid rows
+                                        for (let i = 0; i < docChunks.length; i++) {
+                                            let row = parseFieldsFromHTML(docChunks[i]);
+                                            if (row.incubationName) {
+                                                result.AddRow(row);
+                                            }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CombinedIncubationHTMLData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var html1 = me.getDetailsHTMLData();
+                                        var html2 = me.getHistoryHTMLData();
+                                        var html3 = me.getAttributesHTMLData();
+                                        // Combine them (add spacing or dividers if needed)
+                                        var combinedHTML = html1 + "<hr/>" + html2 + "<hr/>" + html3; // <hr/> adds a horizontal line between sections
+                                        
+                                        // Return the combined HTML
+                                        result = combinedHTML;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAttributesHTMLData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let urls = [
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        let Header = {
+                                            "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                            "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let output = "";  // You can also use let output = []; if you want an array
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: Header,
+                                                ignoreSSLErrors: true,
+                                                url: urls[i],
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            try {
+                                                let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                                output += "==== URL " + (i + 1) + " ====\n" + result + "\n\n";
+                                                // Or for array: output.push(result);
+                                            } catch (err) {
+                                                output += "Error fetching URL " + (i + 1) + ": " + err.message + "\n\n";
+                                            }
+                                        }
+                                        
+                                        // return output as STRING
+                                        result = output;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCalculatedTAT">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // 1. Create output InfoTable with an additional field for diffHours
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "DocumentHistoryWithDiff",
+                                            dataShapeName: "ARN.TAT.DS"
+                                        });
+                                        
+                                        resultTable.AddField({ name: "diffHours", baseType: "NUMBER" });
+                                        
+                                        var getDocumentHistoryFilteredDataInfotable = me.test({
+                                        	ProductCategory: ProductCategory /* STRING */
+                                        });
+                                        
+                                        // 2. Iterate over input rows
+                                        let rows = getDocumentHistoryFilteredDataInfotable.rows.toArray();
+                                        
+                                        rows.forEach(function(row) {
+                                            let diffHours = 0;
+                                        
+                                            try {
+                                                // Extract datetime from ModifiedBy
+                                                let modifiedByMatch = row.ModifiedBy && row.ModifiedBy.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
+                                                // Extract datetime from LastModified (in case it includes timezone)
+                                                let lastModifiedMatch = row.LastModified && row.LastModified.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
+                                        
+                                                if (modifiedByMatch && lastModifiedMatch) {
+                                                    let modifiedByDate = new Date(modifiedByMatch[0].replace(" ", "T"));
+                                                    let lastModifiedDate = new Date(lastModifiedMatch[0].replace(" ", "T"));
+                                        
+                                                    if (!isNaN(modifiedByDate.getTime()) && !isNaN(lastModifiedDate.getTime())) {
+                                                        let msDiff = modifiedByDate - lastModifiedDate;
+                                                        diffHours = msDiff > 0 ? (msDiff / (1000 * 60 * 60)) : 0;
+                                                        diffHours = Math.round(diffHours * 100) / 100;
+                                                    }
+                                                }
+                                            } catch (err) {
+                                                logger.warn("Error parsing row " + row.Name + ": " + err.message);
+                                            }
+                                        
+                                            // Add row
+                                            resultTable.AddRow({
+                                                Name: row.Name,
+                                                diffHours: diffHours
+                                            });
+                                        });
+                                        
+                                        // 3. Return final output
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDetailsHTMLData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let urls = [
+                                            // InfoPage URLs
+                                        
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&portlet=component",
+                                           	"https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3042856&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010440&u8=1&portlet=component",
+                                            "https://windchill.arorian.com/Windchill/ptc1/tcomp/infoPage?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010406&u8=1&portlet=component"
+                                        ];
+                                        
+                                        let Header = {
+                                            "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                            "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let output = "";  // You can also use let output = []; if you want an array
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: Header,
+                                                ignoreSSLErrors: true,
+                                                url: urls[i],
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            try {
+                                                let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                                output += "==== URL " + (i + 1) + " ====\n" + result + "\n\n";
+                                                // Or for array: output.push(result);
+                                            } catch (err) {
+                                                output += "Error fetching URL " + (i + 1) + ": " + err.message + "\n\n";
+                                            }
+                                        }
+                                        
+                                        // return output as STRING
+                                        result = output;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocHistoryDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "DocHistoryDetailsDS"
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Get the combined HTML string
+                                        let htmlContent = me.CombinedIncubationHTMLData();
+                                        
+                                        // Split chunks based on "displayIdentifier" to isolate records
+                                        let entries = htmlContent.split(/(?="displayIdentifier":)/).filter(chunk => chunk.includes("displayIdentifier"));
+                                        
+                                        for (let i = 0; i < entries.length; i++) {
+                                            let chunk = entries[i];
+                                            
+                                            // Extract State
+                                            let stateMatch = chunk.match(/"state"\s*:\s*"(\w+)"/);
+                                            let state = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                            // Extract LastModified from "thePersistInfo_modifyStamp" tooltip
+                                            let lastModifiedMatch = chunk.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                            let lastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                            // Extract UpdatedTime from authorization gui.html
+                                            let updatedTimeMatch = chunk.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"(.*?)"/);
+                                            let updatedTime = updatedTimeMatch ? updatedTimeMatch[1].replace(/&nbsp;/g, '').trim() : "";
+                                        
+                                            result.AddRow({
+                                                State: state,
+                                                LastModified: lastModified,
+                                                UpdatedTime: updatedTime
+                                            });
+                                        }
+                                        
+                                        // Return the result
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocName">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "IncubationNameShape" // Your DataShape with 'incubationName' as key
+                                        };
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Get the combined HTML string (you need to define this service to return HTML)
+                                        let htmlContent = me.CombinedIncubationHTMLData();
+                                        
+                                        // Split each section that includes displayIdentifier
+                                        let entries = htmlContent.split(/(?="displayIdentifier":)/).filter(chunk => chunk.includes("displayIdentifier"));
+                                        
+                                        for (let i = 0; i < entries.length; i++) {
+                                            let match = entries[i].match(/"displayIdentifier":\s*"([^"]+)"/);
+                                            if (match) {
+                                                let fullIdentifier = match[1];
+                                                let incubationName = fullIdentifier.split(",")[0].trim(); // In case extra comma-separated data
+                                                result.AddRow({ incubationName: incubationName });
+                                            }
+                                        }
+                                        
+                                        // Return the result table
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getHistoryHTMLData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let urls = [
+                                            // InfoPage URLs
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        let Header = {
+                                            "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                            "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let output = "";  // You can also use let output = []; if you want an array
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: Header,
+                                                ignoreSSLErrors: true,
+                                                url: urls[i],
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            try {
+                                                let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                                output += "==== URL " + (i + 1) + " ====\n" + result + "\n\n";
+                                                // Or for array: output.push(result);
+                                            } catch (err) {
+                                                output += "Error fetching URL " + (i + 1) + ": " + err.message + "\n\n";
+                                            }
+                                        }
+                                        
+                                        // return output as STRING
+                                        result = output;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getIncubationTimeDiff">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define parameters for creating an InfoTable
+                                        let params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "IncubationTimeDiffDataShape" // Ensure this DataShape exists with 'incubationName' (STRING) and 'hoursDifference' (NUMBER)
+                                        };
+                                        
+                                        // Create the result InfoTable from the specified DataShape
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Hardcoded data for the documents and hours
+                                        let docs = [
+                                            {incubationName: "INC-AC-CFT-0000018307", hoursDifference: 168.9833 },
+                                            {incubationName: "INC-AC-CFT-0000017946", hoursDifference: 168.9833 },
+                                            {incubationName: "INC-AC-CFT-0000017362", hoursDifference: 168.9833 },
+                                            {incubationName: "INC-AC-CFT-0000016894", hoursDifference: 168.9833 },
+                                            {incubationName: "INC-AC-CFT-0000015107", hoursDifference: 168.9833 }
+                                        ];
+                                        
+                                        // Loop through each document and add it to the InfoTable
+                                        for (let i = 0; i < docs.length; i++) {
+                                            result.AddRow({
+                                                incubationName: docs[i].incubationName,  // Map incubationName to the DataShape field 'incubationName'
+                                                hoursDifference: docs[i].hoursDifference // Map hoursDifference to the DataShape field 'hoursDifference'
+                                            });
+                                        }
+                                        
+                                        // Return the InfoTable
+                                        //return result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="NamedHoursDifference">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        	"Accept": "application/json"
+                                        };
+                                        
+                                        let urls = [
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        // Step 1: Build original InfoTable
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "HistoryTable",
+                                        	dataShapeName: "test2"
+                                        });
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                        	let params = {
+                                        		proxyScheme: undefined,
+                                        		headers: Header,
+                                        		ignoreSSLErrors: true,
+                                        		url: urls[i],
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	try {
+                                        		let htmlContent = Resources["ContentLoaderFunctions"].PostText(params);
+                                        		let row = {};
+                                        
+                                        		let datetimeMatch = htmlContent.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2} (CEST|CET)/);
+                                        		row.ModifiedBy = datetimeMatch ? datetimeMatch[0] : "";
+                                        
+                                        		let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                        		row.LastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                        		let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                        		row.State = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                        		row.EquipmentType = "Air Conditioner";
+                                        
+                                        		resultTable.AddRow(row);
+                                        	} catch (err) {
+                                        		logger.warn("Failed to process URL: " + urls[i] + " | Error: " + err.message);
+                                        	}
+                                        }
+                                        
+                                        // Step 2: Filter + Calculate Hours
+                                        let outputTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "TimeDiffTable",
+                                        	dataShapeName: "NamedHoursDifferenceDS"
+                                        });
+                                        
+                                        for (let i = 0; i < resultTable.rows.length; i++) {
+                                        	let row = resultTable.rows[i];
+                                        
+                                        	if (row.State === "APPROVED" && row.EquipmentType === "Air Conditioner") {
+                                        		try {
+                                        			let modifiedStr = row.ModifiedBy.replace(/ (CEST|CET)$/, "");
+                                        			let lastModifiedStr = row.LastModified.replace(/ (CEST|CET)$/, "");
+                                        
+                                        			let modifiedDate = new Date(modifiedStr);
+                                        			let lastModifiedDate = new Date(lastModifiedStr);
+                                        
+                                        			if (!isNaN(modifiedDate) && !isNaN(lastModifiedDate)) {
+                                        				let hourDiff = (modifiedDate - lastModifiedDate) / (1000 * 60 * 60);
+                                        
+                                        				let outputRow = {
+                                        					Name: row.ModifiedBy.split(" ")[0],
+                                        					HourDiff: parseFloat(hourDiff.toFixed(2)),
+                                        					EquipmentType: row.EquipmentType
+                                        				};
+                                        
+                                        				outputTable.AddRow(outputRow);
+                                        			}
+                                        		} catch (e) {
+                                        			logger.warn("Date parse error: " + e.message);
+                                        		}
+                                        	}
+                                        }
+                                        
+                                        result = outputTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // 1. Call your existing service to get all document data
+                                        let allDocuments = me.testCopyCopyCopy();  // Replace with actual Thing/Service name
+                                        
+                                        // 2. Create output InfoTable
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "FilteredDocuments",
+                                            dataShapeName: "test2"  // Replace with correct DataShape that includes Name, State, LastModified, ModifiedBy
+                                        });
+                                        
+                                        // 3. Validate ProductCategory
+                                        if (ProductCategory && ProductCategory.trim().length > 0) {
+                                            // 4. Filter for "Approved" state and matching EquipmentType
+                                            let filteredRows = allDocuments.rows.toArray().filter(function(item) {
+                                                return item.State === "Approved" &&
+                                                       item.EquipmentType &&
+                                                       item.EquipmentType.toLowerCase().includes(ProductCategory.toLowerCase());
+                                            });
+                                        
+                                            // 5. Populate result InfoTable
+                                            filteredRows.forEach(function(row) {
+                                                resultTable.AddRow({
+                                                    Name: row.Name,
+                                                    State: row.State,
+                                                    LastModified: row.LastModified,
+                                                    ModifiedBy: row.ModifiedBy,
+                                                    EquipmentType: row.EquipmentType
+                                                });
+                                            });
+                                        }
+                                        
+                                        // 6. Return filtered result
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="testCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        	"Accept": "application/json"
+                                        };
+                                        
+                                        let urls = [
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                            "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "HistoryTable",
+                                        	dataShapeName: "test2"
+                                        });
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                        	let params = {
+                                        		proxyScheme: undefined,
+                                        		headers: Header,
+                                        		ignoreSSLErrors: true,
+                                        		url: urls[i],
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	try {
+                                        		let htmlContent = Resources["ContentLoaderFunctions"].PostText(params);
+                                        		let row = {};
+                                        
+                                        		// Modified By
+                                        		let modifiedByMatch = htmlContent.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"(.*?)"/);
+                                        		row.ModifiedBy = modifiedByMatch ? modifiedByMatch[1].replace(/&nbsp;/g, '').trim() : "";
+                                        
+                                        		// Last Modified
+                                        		let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                        		row.LastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                        		// State
+                                        		let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                        		row.State = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                        		resultTable.AddRow(row);
+                                        	} catch (err) {
+                                        		logger.warn("Failed to process URL: " + urls[i] + " | Error: " + err.message);
+                                        	}
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="testCopyCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        	"Accept": "application/json"
+                                        };
+                                        
+                                        let urls = [
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3042856&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010440&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010406&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "HistoryTable",
+                                        	dataShapeName: "test2"
+                                        });
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                        	let currentUrl = urls[i];
+                                        
+                                        	let params = {
+                                        		proxyScheme: undefined,
+                                        		headers: Header,
+                                        		ignoreSSLErrors: true,
+                                        		url: currentUrl,
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	let row = {};
+                                        
+                                        	try {
+                                        		let htmlContent = Resources["ContentLoaderFunctions"].PostText(params);
+                                        
+                                        		// Extract ModifiedBy
+                                        		let modifiedByMatch = htmlContent.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"([^"]*?\s*?\d{2}:\d{2}\s*?CEST)"/);
+                                        		row.ModifiedBy = modifiedByMatch ? modifiedByMatch[1].replace(/&nbsp;/g, '').trim() : "";
+                                        
+                                        		// Extract LastModified
+                                        		let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                        		row.LastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                        		// Extract State
+                                        		let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                        		row.State = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                        		// Static value
+                                        		row.EquipmentType = "Air Conditioner";
+                                        
+                                        		// 🆕 Extract Document ID and call getDocName
+                                        		let docIdMatch = currentUrl.match(/WTDocument%3A(\d+)/);
+                                        		let docId = docIdMatch ? docIdMatch[1] : null;
+                                        
+                                        		let incubationName = "Unknown";
+                                        		if (docId !== null) {
+                                        			let nameResult =me.getDocName();
+                                        			if (nameResult.rows.length > 0) {
+                                        				incubationName = nameResult.rows[0].incubationName;
+                                        			}
+                                        		}
+                                        
+                                        		// Assign the incubationName to Name column
+                                        		row.Name = incubationName;
+                                        
+                                        		resultTable.AddRow(row);
+                                        	} catch (err) {
+                                        		logger.warn("Failed to process URL: " + currentUrl + " | Error: " + err.message);
+                                        	}
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="testCopyCopyCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        	"Accept": "application/json"
+                                        };
+                                        
+                                        let urls = [
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3042856&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010440&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010406&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        // Hardcoded Names
+                                        let names = [
+                                        	"INC-AC-CFT-0000018307",
+                                        	"INC-AC-CFT-0000017946",
+                                        	"INC-AC-CFT-0000017362",
+                                        	"INC-AC-CFT-0000016894",
+                                        	"INC-AC-CFT-0000015107",
+                                        	"INC-CT-CFT-0000015966",
+                                        	"INC-CT-CFT-0000014986",
+                                        	"INC-CT-CFT-0000014979"
+                                        ];
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "HistoryTable",
+                                        	dataShapeName: "test2"
+                                        });
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                        	let currentUrl = urls[i];
+                                        
+                                        	let params = {
+                                        		proxyScheme: undefined,
+                                        		headers: Header,
+                                        		ignoreSSLErrors: true,
+                                        		url: currentUrl,
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	let row = {};
+                                        
+                                        	try {
+                                        		let htmlContent = Resources["ContentLoaderFunctions"].PostText(params);
+                                        
+                                        		// Extract ModifiedBy
+                                        		let modifiedByMatch = htmlContent.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"([^"]*?\s*?\d{2}:\d{2}\s*?CEST)"/);
+                                        		row.ModifiedBy = modifiedByMatch ? modifiedByMatch[1].replace(/&nbsp;/g, '').trim() : "";
+                                        
+                                        		// Extract LastModified
+                                        		let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                        		row.LastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                        		// Extract State
+                                        		let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                        		row.State = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                        		// Set EquipmentType
+                                        		if (i >= urls.length - 3) {
+                                        			row.EquipmentType = "CookTop";
+                                        		} else {
+                                        			row.EquipmentType = "Air Conditioner";
+                                        		}
+                                        
+                                        		// Assign Name from list
+                                        		row.Name = names[i] || "Unknown";
+                                        
+                                        		resultTable.AddRow(row);
+                                        	} catch (err) {
+                                        		logger.warn("Failed to process URL: " + currentUrl + " | Error: " + err.message);
+                                        	}
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

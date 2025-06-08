@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.NPI_NPD_Dashboard.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDetailsOfPlans">
+                        <ResultType
+                         aspect.dataShape="WindchillAttributesDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="oid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlanData">
+                        <ResultType
+                         aspect.dataShape="ARN.NameValue1.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjectPlans">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="processPlanData">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="processProjectPlansData">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="projectPlansInfoTable">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR:wt.projmgmt.admin.Project2:3303837"
+                             baseType="STRING"
+                             description=""
+                             name="ContainerOid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDetailsOfPlans">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /*
+                                            Service    : getPlans
+                                            Description: This Service gives the plans (attributes) as an output based on the response from POST.
+                                            Output     : JSON string representing an array of { Name, Value } objects.
+                                            Created By : Shashi Preetham
+                                            Created On : 14-04-2025
+                                        */
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillAttributesDS)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WindchillAttributesDS"
+                                        });
+                                        
+                                        let outputArray = [];
+                                        
+                                        try {
+                                            // Define request headers.
+                                            let headers = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"
+                                            };
+                                        
+                                            // Set up the request parameters.
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: headers,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid="+oid+"&u8=1&AjaxEnabled=thirdLevelNav",
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            // Retrieve the raw text response.
+                                            let windchillData = Resources["ContentLoaderFunctions"].PostText(params);
+                                        
+                                            // Remove all HTML tags (anything between < and >) and replace common HTML entities.
+                                            let cleanedData = windchillData.replace(/<[^>]+>/g, "")
+                                                                           .replace(/&nbsp;/g, " ")
+                                                                           .trim();
+                                            
+                                            // If there are extraneous symbols appended (like carets "^"), take only the first part.
+                                            let jsonString = cleanedData.split('^')[0].trim();
+                                            
+                                            // Parse the cleaned JSON string.
+                                            let parsedData = JSON.parse(jsonString);
+                                        
+                                            // Helper function to extract a user-friendly value from a column value.
+                                            function extractValue(val) {
+                                                if (val == null) return "";
+                                                if (typeof val === "string") return val.trim();
+                                                if (typeof val === "object") {
+                                                    // Look for common fields in the "gui" property.
+                                                    if (val.gui) {
+                                                        if (val.gui.displayValue) return val.gui.displayValue.toString();
+                                                        if (val.gui.text) return val.gui.text.toString();
+                                                        if (val.gui.export_value) return val.gui.export_value.toString();
+                                                        if (val.gui.html) return val.gui.html.toString();
+                                                    }
+                                                    // Fallback: Convert the object to a string.
+                                                    return JSON.stringify(val);
+                                                }
+                                                return val.toString();
+                                            }
+                                        
+                                            // Iterate through groups, rows, and columns.
+                                            if (parsedData.groups) {
+                                                parsedData.groups.forEach(function(group) {
+                                                    if (group.rows) {
+                                                        group.rows.forEach(function(row) {
+                                                            if (row.columns) {
+                                                                row.columns.forEach(function(column) {
+                                                                    // Get the label (Name)
+                                                                    let label = (column.label || "").trim();
+                                                                    
+                                                                    // Get the value
+                                                                    let value = "";
+                                                                    if (column.value) {
+                                                                        if (typeof column.value === "string") {
+                                                                            value = column.value.trim();
+                                                                        } else {
+                                                                            value = extractValue(column.value);
+                                                                        }
+                                                                    }
+                                                                    
+                                                                    // Only add a row if at least one of name or value is non-empty.
+                                                                    if (label !== "" || value !== "") {
+                                                                        result.AddRow(
+                                                                            { 
+                                                                                attributeLabel: label , 
+                                                                                attributeValue: value 
+                                                                            }
+                                                                        );
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                            
+                                            // Return the output as a JSON string.
+                                        } 
+                                        catch (e) {
+                                            logger.error("getPlans Error: " + e + " >>> lineNumber: " + e.lineNumber);
+                                        //    result = JSON.stringify({ error: e.toString() });
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlanData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.NameValue1.DS"
+                                        });
+                                        
+                                        let Header = {
+                                            "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                            "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                            headers: Header /* JSON */,
+                                            ignoreSSLErrors: true /* BOOLEAN */,
+                                            // url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015&u8=1&AjaxEnabled=thirdLevelNav" /* STRING */,
+                                            url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.plan.plansTable?ContainerOid=OR%3Awt.projmgmt.admin.Project2%3A3303837&oid=OR%3Awt.projmgmt.admin.Project2%3A3303837&u8=1&portlet=component",
+                                            timeout: 300 /* NUMBER {"defaultValue":60} */
+                                        });
+                                        
+                                        let planNames = []; 
+                                        let parts = windchillData.split('ext:qtip=');
+                                        
+                                        for (let i = 1; i < parts.length; i++) 
+                                        {
+                                            let segment = parts[i]; 
+                                            let planName = segment.split('a>')[0]; 
+                                            planName = planName.split('>')[0]; 
+                                            planName = planName.replace("\ ",""); 
+                                            planName = planName.replace(/["\\]/g, "");   
+                                            result.AddRow({ Name: planName,  Value: planName});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjectPlans">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let params = {
+                                        	proxyScheme: undefined /* STRING {"defaultValue":"http"} */,
+                                        	headers: Header /* JSON */,
+                                        	ignoreSSLErrors: true /* BOOLEAN */,
+                                        	url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.plan.plansTable?ContainerOid=OR%3Awt.projmgmt.admin.Project2%3A3303837&oid=OR%3Awt.projmgmt.admin.Project2%3A3303837&u8=1&portlet=component" /* STRING */,
+                                        	content: undefined /* STRING */,
+                                        	timeout: 300 /* NUMBER {"defaultValue":60} */
+                                        };
+                                        
+                                        // result: STRING
+                                        let result = Resources["ContentLoaderFunctions"].PostText(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="processPlanData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let htmlContent = me.getPlanData();
+                                        
+                                        var start = htmlContent.indexOf('{');
+                                        var openBraces = 0;
+                                        var end = -1;
+                                        
+                                        for (var i = start; i < htmlContent.length; i++) {
+                                        	var char = htmlContent.charAt(i);
+                                        	if (char === '{') openBraces++;
+                                        	else if (char === '}') openBraces--;
+                                        
+                                        	if (openBraces === 0 && start !== -1) {
+                                        		end = i;
+                                        		break;
+                                        	}
+                                        }
+                                        
+                                        if (start !== -1 && end !== -1) {
+                                        	var jsonText = htmlContent.substring(start, end + 1); // Extract clean JSON portion
+                                        
+                                        	logger.warn("Extracted JSON text: " + jsonText);
+                                        
+                                        	try {
+                                        		var parsed = JSON.parse(jsonText);
+                                        		var groups = parsed.groups;
+                                        		
+                                        		result = groups; 
+                                        
+                                        	} catch (err) {
+                                        		logger.error("JSON parsing failed: " + err.message);
+                                        		result = null;
+                                        	}
+                                        } else {
+                                        	logger.warn("ap.init() block not found or JSON is malformed.");
+                                        	result = null;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="processProjectPlansData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let htmlContent = me.getProjectPlans();
+                                        
+                                        // STEP 2: Extract all <script>...</script> tags
+                                        let scripts = htmlContent.match(/<script[^>]*>([\s\S]*?)<\/script>/gi);
+                                        let found = false;
+                                        
+                                        if (scripts && scripts.length > 0) {
+                                        	for (let i = 0; i < scripts.length; i++) {
+                                        		let script = scripts[i];
+                                        
+                                        		// STEP 3: Look for the chunk assignment inside this script
+                                        		if (script.includes("PTC.ExtJSONTableConfig.chunk")) {
+                                        			logger.warn("Found 'chunk' in script #" + i);
+                                        			logger.warn(script); // Optional: show the whole script content
+                                        			found = true;
+                                        			let content = script; // Stop after first match
+                                        			var result = {};
+                                        			try {
+                                        				// Match the chunk using RegEx
+                                        				var regex = /PTC\.ExtJSONTableConfig\.chunk\s*=\s*(\{[\s\S]*?\});/;
+                                        				var match = content.match(regex);
+                                        
+                                        				if (match && match.length > 1) {
+                                        					var jsonString = match[1];
+                                        
+                                        					// Parse JSON safely
+                                        					let jsonData = JSON.parse(jsonString);
+                                                            result = jsonData.data;
+                                        				} else {
+                                        					logger.warn("PTC.ExtJSONTableConfig.chunk not found in content");
+                                        				}
+                                        			} catch (err) {
+                                        				logger.error("Error parsing chunk JSON: " + err.message);
+                                        			}
+                                        		}
+                                        	}
+                                        }
+                                        
+                                        if (!found) {
+                                        	logger.warn("No script tag contains 'PTC.ExtJSONTableConfig.chunk'");
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="projectPlansInfoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let jsonData = me.processProjectPlansData();
+                                        
+                                        let projectPlansInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.ProjectPlans.DT"
+                                        });
+                                        
+                                        // Loop over array and extract values
+                                        let items = jsonData.array;
+                                        for (i = 0; i < items.length; i++) {
+                                            let row = items[i];
+                                        
+                                            projectPlansInfoTable.AddRow({
+                                                Name: row.name.gui.comparable,
+                                                Owner: row.ownership_owner.gui.comparable,
+                                                OID: row.oid,
+                                                FinishDate: row.finishDate
+                                            });
+                                        }
+                                        
+                                        result = projectPlansInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /*
+                                        	Service    : getPlans
+                                            Description: This Service gives the plans as an output based on response from POST
+                                            Created By : Shashi Preetham
+                                            Created On : 14-04-2025
+                                        */
+                                        
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.NameValue1.DS"
+                                        });
+                                        
+                                        ContainerOid = ContainerOid.replace(/:/g, "%3A");
+                                        
+                                        try
+                                        {
+                                            let Header = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"
+                                            };
+                                        
+                                            let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                                headers: Header /* JSON */,
+                                                ignoreSSLErrors: true /* BOOLEAN */,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.plan.plansTable?ContainerOid="+ContainerOid+"&oid="+ContainerOid+"&u8=1&portlet=component",
+                                                timeout: 300 /* NUMBER {"defaultValue":60} */
+                                            });
+                                        
+                                            let planNames = []; 
+                                            let parts = windchillData.split('ext:qtip=');
+                                        
+                                            for (let i = 1; i < parts.length; i++) 
+                                            {
+                                                let segment = parts[i]; 
+                                                
+                                                let planName = segment.split('a>')[0]; 
+                                                planName = planName.split('>')[0]; 
+                                                planName = planName.replace("\ ",""); 
+                                                planName = planName.replace(/["\\]/g, "");  
+                                        		
+                                        		let oid = parts[i];
+                                        		oid = oid.split('"oid":')[1];
+                                        		oid = oid.split(',"jsca_context":')[0];
+                                        		
+                                                result.AddRow({ Name: planName,  Value: oid.replace(/"/g, ' ')});
+                                            } 
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.error("ARN.NPI_NPD_Dashboard.T >>> getPlans >>> Error: "+e+ " >>> lineNumber: "+e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

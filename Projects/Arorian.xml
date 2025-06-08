@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Projects>
+        <Project
+         artifactId=""
+         aspect.projectType="Component"
+         dependsOn="{&quot;extensions&quot;:&quot;PTC-Navigate-View-PLM-App-extension:9.4.0,ptc-navigate-framework-extension:9.4.0,TWX_Converge_Core_ExtensionPackage:9.4.0,ptc-nav-progress-widget:9.4.0,UniversalConverter_Extensions:2.0.0,ptc-windchill-adapter-extension:9.4.0&quot;,&quot;projects&quot;:&quot;DPT Collaboration Layer:1.0.0,TWX_DPT_Navigate:1.0.0&quot;}"
+         description=""
+         documentationContent=""
+         groupId=""
+         homeMashup=""
+         minPlatformVersion=""
+         name="Arorian"
+         packageVersion="1.0.0"
+         projectName="Arorian"
+         publishResult=""
+         state="DRAFT"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Project>
+    </Projects>
+</Entities>

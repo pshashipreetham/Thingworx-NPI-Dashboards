@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.ProductDashboard.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDeadlines">
+                        <ResultType
+                         aspect.dataShape="ARN.StatusGraph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDeadlines">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // 1. Fetch raw infotable
+                                        var raw = Things["ARN.StatusDashboard.T"].getBottleNecks();
+                                        
+                                        // 2. Instantiate result InfoTable
+                                        var plan = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "planOutput",
+                                        	dataShapeName: "BottleneckPlanOutput"
+                                        });
+                                        
+                                        // 3. Capture current timestamp
+                                        var now = new Date(); // current server time :contentReference[oaicite:0]{index=0}
+                                        
+                                        // 4. Define parse pattern
+                                        var pattern = "M/d/yy hh:mm a"; // parseDate uses Java SimpleDateFormat :contentReference[oaicite:1]{index=1}
+                                        
+                                        for (var i = 0; i < raw.getRowCount(); i++) {
+                                        	var row = raw.rows[i];
+                                        
+                                        	// 5. Parse input strings
+                                        	var estStart = parseDate(row.estimatedStart, pattern);
+                                        	var estFinish = parseDate(row.estimatedFinish, pattern);
+                                        	var deadline = parseDate(row.deadline, pattern);
+                                        
+                                        	// 6. Compute base metrics (in minutes)
+                                        	var durationMin = (estFinish.getTime() - estStart.getTime()) / 60000;
+                                        	var timeRemainingMin = (deadline.getTime() - estFinish.getTime()) / 60000;
+                                        
+                                        	// 7. Compute time-relative to now (in minutes)
+                                        	var timeSinceStart = (now.getTime() - estStart.getTime()) / 60000;
+                                        	var timeUntilDeadline = (deadline.getTime() - now.getTime()) / 60000; // or use Date.now() :contentReference[oaicite:2]{index=2}
+                                        
+                                        	// 8. Add row with extra fields
+                                        	plan.AddRow({
+                                        		phase: row.station,
+                                        		estimatedStart: estStart,
+                                        		estimatedFinish: estFinish,
+                                        		deadline: deadline,
+                                        		Duration: durationMin,
+                                        		timeRemaining: timeRemainingMin,
+                                        		timeSinceStart: timeSinceStart,
+                                        		timeUntilDeadline: timeUntilDeadline,
+                                        		currentTime: now
+                                        	});
+                                        }
+                                        
+                                        // 9. Return result
+                                        result = plan;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

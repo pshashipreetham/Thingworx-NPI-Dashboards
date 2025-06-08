@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.ProjectLinkDashboard.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetJson">
+                        <ResultType
+                         aspect.dataShape="WindchillAttributesDS"
+                         baseType="TEXT"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getJsonOutput">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadInfoTableData">
+                        <ResultType
+                         aspect.dataShape="ARN.ProjectDetails.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="WorkProgressGraph">
+                        <ResultType
+                         aspect.dataShape="ARN.WorkProgressGraph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetJson">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillAttributesDS)
+                                        let planDetails = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WindchillAttributesDS" 
+                                            // Make sure "WindchillAttributesDS" has fields:
+                                            // groupName (STRING) - optional if you want it
+                                            // attributeLabel (STRING)
+                                            // attributeValue (STRING)
+                                        });
+                                        
+                                        
+                                            // Request headers for authentication/session
+                                            let headers = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"  // Asking for JSON if possible.
+                                            };
+                                        
+                                            // Setup request parameters
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: headers,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015&u8=1&AjaxEnabled=thirdLevelNav",
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            // 1) Get the raw response as text
+                                            let textData = Resources["ContentLoaderFunctions"].GetText(params);
+                                            
+                                            result = textData;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getJsonOutput">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Create an InfoTable from a data shape
+                                        let planDetails = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WindchillAttributesDS"
+                                        });
+                                        
+                                        try {
+                                            // Set up headers for authentication/session and request expectations.
+                                            let headers = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",  // Base64 encoded credentials
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"  // Request JSON if possible
+                                            };
+                                        
+                                            // Define request parameters for the content loader.
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: headers,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015&u8=1&AjaxEnabled=thirdLevelNav",
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                        
+                                            // Retrieve the raw text response.
+                                            let textData = Resources["ContentLoaderFunctions"].GetText(params);
+                                            result = textData;
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.warn("Error:"+e);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadInfoTableData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                            // Create an InfoTable from the defined DataShape
+                                            var resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "ProjectDataInfoTable",
+                                                dataShapeName: "ARN.ProjectDetails.DS"
+                                            });
+                                        
+                                            // Dummy Row 1
+                                            var rowData1 = {
+                                        		ProjectName:"Aro Internal Testing, Livpure",
+                                        		Name: "Aro Internal Testing",
+                                                Description: "Unavailable",
+                                                Risk: "Unavailable",
+                                                Risk_Description: "Unavailable",
+                                                Owner: "livadmin",
+                                                Status: "Under Maintenance",
+                                                Estimated_Start: "2025-03-18T08:00:00.000Z",
+                                                Actual_Start: "2025-03-18T08:00:00.000Z",
+                                                Estimated_Finish: "2025-11-17T17:00:00.000Z",
+                                                Actual_Finish: "2025-11-19T17:00:00.000Z",
+                                                Fixed_Cost: 0,
+                                                Cost: 0,
+                                                Rolled_Up_Cost: 0,
+                                                Duration: 175,
+                                                Effort: 4136,
+                                                Calendar: "Standard",
+                                                Execution_Control: "Manual",
+                                                Linked_Deliverable: "No",
+                                                Currency_Symbol: "$",
+                                                Currency_Placement: "Before",
+                                                Currency_Decimal_Digits: 0,
+                                                Context: "Aro Internal Testing",
+                                                Created_On: "2025-03-18T07:52:00.000Z",
+                                                Last_Modified: "2025-03-26T12:08:00.000Z",
+                                                Work_Progress: 5
+                                            };
+                                            resultTable.AddRow(rowData1);
+                                        
+                                            // Dummy Row 2
+                                            var rowData2 = {
+                                                ProjectName:"Aro Internal Testing, Livpure",
+                                                Name: "Beta System Test",
+                                                Description: "Functional Testing",
+                                                Risk: "Medium",
+                                                Risk_Description: "Potential security gaps",
+                                                Owner: "user01",
+                                                Status: "Up",
+                                                Estimated_Start: "2025-04-01T09:00:00.000Z",
+                                                Actual_Start: "2025-04-01T09:15:00.000Z",
+                                                Estimated_Finish: "2025-07-15T18:00:00.000Z",
+                                                Actual_Finish: "2025-07-25T18:00:00.000Z",
+                                                Fixed_Cost: 500,
+                                                Cost: 500,
+                                                Rolled_Up_Cost: 500,
+                                                Duration: 105,
+                                                Effort: 2500,
+                                                Calendar: "Standard",
+                                                Execution_Control: "Manual",
+                                                Linked_Deliverable: "No",
+                                                Currency_Symbol: "$",
+                                                Currency_Placement: "Before",
+                                                Currency_Decimal_Digits: 0,
+                                                Context: "Beta Testing Phase",
+                                                Created_On: "2025-04-01T08:45:00.000Z",
+                                                Last_Modified: "2025-04-02T10:30:00.000Z",
+                                                Work_Progress: 4.42
+                                            };
+                                            resultTable.AddRow(rowData2);
+                                        
+                                            // Dummy Row 3
+                                            var rowData3 = {
+                                                ProjectName:"Aro Internal Testing, Livpure",
+                                                Name: "Gamma Load Test",
+                                                Description: "Performance Testing",
+                                                Risk: "High",
+                                                Risk_Description: "Server crash possibility",
+                                                Owner: "admin02",
+                                                Status: "Stopped",
+                                                Estimated_Start: "2025-05-10T10:00:00.000Z",
+                                                Actual_Start: "2025-05-10T10:10:00.000Z",
+                                                Estimated_Finish: "2025-09-30T19:00:00.000Z",
+                                                Actual_Finish: "2025-10-30T19:00:00.000Z",
+                                                Fixed_Cost: 1000,
+                                                Cost: 1200,
+                                                Rolled_Up_Cost: 1200,
+                                                Duration: 143,
+                                                Effort: 3000,
+                                                Calendar: "Standard",
+                                                Execution_Control: "Manual",
+                                                Linked_Deliverable: "No",
+                                                Currency_Symbol: "$",
+                                                Currency_Placement: "Before",
+                                                Currency_Decimal_Digits: 0,
+                                                Context: "Load Testing Process",
+                                                Created_On: "2025-05-10T09:30:00.000Z",
+                                                Last_Modified: "2025-05-15T02:45:00.000Z",
+                                                Work_Progress: 21.72
+                                            };
+                                            resultTable.AddRow(rowData3);
+                                        
+                                            // Dummy Row 4
+                                            var rowData4 = {
+                                                ProjectName:"Aro Internal Testing, Livpure",
+                                                Name: "Delta Integration",
+                                                Description: "System Testing",
+                                                Risk: "Low",
+                                                Risk_Description: "Minor UI issues",
+                                                Owner: "tester03",
+                                                Status: "Under Maintenance",
+                                                Estimated_Start: "2025-06-20T11:00:00.000Z",
+                                                Actual_Start: "2025-06-20T11:30:00.000Z",
+                                                Estimated_Finish: "2025-10-25T16:00:00.000Z",
+                                                Actual_Finish: "2025-10-25T16:00:00.000Z",
+                                                Fixed_Cost: 200,
+                                                Cost: 250,
+                                                Rolled_Up_Cost: 250,
+                                                Duration: 127,
+                                                Effort: 2200,
+                                                Calendar: "Standard",
+                                                Execution_Control: "Manual",
+                                                Linked_Deliverable: "No",
+                                                Currency_Symbol: "$",
+                                                Currency_Placement: "Before",
+                                                Currency_Decimal_Digits: 0,
+                                                Context: "Integration Testing",
+                                                Created_On: "2025-06-20T10:50:00.000Z",
+                                                Last_Modified: "2025-06-22T01:20:00.000Z",
+                                                Work_Progress: 60
+                                            };
+                                            resultTable.AddRow(rowData4);
+                                        
+                                            // Return the result
+                                            result = resultTable;
+                                        } catch (e) {
+                                            throw new Error("Failed to send dummy data: " + e);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillAttributesDS)
+                                        let planDetails = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WindchillAttributesDS" 
+                                            // Make sure "WindchillAttributesDS" has fields:
+                                            // groupName (STRING) - optional if you want it
+                                            // attributeLabel (STRING)
+                                            // attributeValue (STRING)
+                                        });
+                                         
+                                        try {
+                                            // Request headers for authentication/session
+                                            let headers = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"  // Asking for JSON if possible.
+                                            };
+                                         
+                                            // Setup request parameters
+                                            let params = {
+                                                proxyScheme: undefined,
+                                                headers: headers,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015&u8=1&AjaxEnabled=thirdLevelNav",
+                                                content: undefined,
+                                                timeout: 300
+                                            };
+                                         
+                                            // 1) Get the raw response as text
+                                            let textData = Resources["ContentLoaderFunctions"].GetText(params);
+                                            let trimmed = textData.trim();
+                                            let jsonData;
+                                         
+                                            /**
+                                             * Helper function to parse a single 'value' from JSON or
+                                             * a string into something user-friendly.
+                                             */
+                                            function parseValue(value) {
+                                                // null or undefined
+                                                if (value == null) {
+                                                    return "";
+                                                }
+                                         
+                                                // If it's a string, see if we can parse it as JSON
+                                                if (typeof value === "string") {
+                                                    let trimmedStr = value.trim();
+                                                    if (trimmedStr.charAt(0) === "{" || trimmedStr.charAt(0) === "[") {
+                                                        try {
+                                                            let parsed = JSON.parse(trimmedStr);
+                                                            // Recursively parse the newly parsed object
+                                                            return parseValue(parsed);
+                                                        } catch (e) {
+                                                            // Return the string if parsing fails
+                                                            return value;
+                                                        }
+                                                    } else {
+                                                        return value;
+                                                    }
+                                                }
+                                         
+                                                // If it's an object, check for typical fields
+                                                if (typeof value === "object") {
+                                                    if (value.gui) {
+                                                        if (value.gui.text) {
+                                                            return value.gui.text;
+                                                        } else if (value.gui.displayValue) {
+                                                            return value.gui.displayValue;
+                                                        } else if (value.gui.value) {
+                                                            return value.gui.value;
+                                                        } else if (value.gui.html) {
+                                                            return value.gui.html;
+                                                        }
+                                                    }
+                                         
+                                                    // Check other fields
+                                                    if (value.value) {
+                                                        return value.value;
+                                                    }
+                                                    if (value.html) {
+                                                        return value.html;
+                                                    }
+                                                    if (value.label) {
+                                                        return value.label;
+                                                    }
+                                                    if (value.tooltip) {
+                                                        return value.tooltip;
+                                                    }
+                                         
+                                                    // Fallback to stringifying
+                                                    return JSON.stringify(value);
+                                                }
+                                         
+                                                // Last fallback for other data types
+                                                return value + "";
+                                            }
+                                         
+                                            // 2) Detect if response is JSON or HTML-like
+                                            if (trimmed.charAt(0) === "{" || trimmed.charAt(0) === "[") {
+                                                try {
+                                                    // Attempt to parse full text
+                                                    jsonData = JSON.parse(textData);
+                                                } catch (parseError) {
+                                                    // If that fails, manually slice out the JSON substring
+                                                    let firstBrace = textData.indexOf('{');
+                                                    let lastBrace = textData.lastIndexOf('}');
+                                                    let firstBracket = textData.indexOf('[');
+                                                    let lastBracket = textData.lastIndexOf(']');
+                                                    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+                                                        let jsonSubstring = textData.substring(firstBrace, lastBrace + 1);
+                                                        jsonData = JSON.parse(jsonSubstring);
+                                                    } else if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
+                                                        let jsonSubstring = textData.substring(firstBracket, lastBracket + 1);
+                                                        jsonData = JSON.parse(jsonSubstring);
+                                                    } else {
+                                                        throw parseError; // re-throw if no valid JSON structure is found
+                                                    }
+                                                }
+                                         
+                                                // 3) If we successfully parsed JSON, assume it has groups → rows → columns
+                                                if (jsonData.groups && jsonData.groups.length > 0) {
+                                                    jsonData.groups.forEach(function(group) {
+                                                        if (group.rows && group.rows.length > 0) {
+                                                            group.rows.forEach(function(row) {
+                                                                if (row.columns && row.columns.length > 0) {
+                                                                    row.columns.forEach(function(column) {
+                                                                        let label = column.label ? column.label.trim() : "";
+                                                                        let rawValue = column.value;
+                                                                        // Use parseValue to handle nested/stringified JSON
+                                                                        let cleanValue = parseValue(rawValue);
+                                                                        planDetails.AddRow({
+                                                                            // Optionally capture group name if you like:
+                                                                            groupName: group.groupName || "",
+                                                                            attributeLabel: label,
+                                                                            attributeValue: cleanValue
+                                                                        });
+                                                                    });
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+                                                }
+                                            } else {
+                                                // 4) Otherwise, treat the response as HTML and do pattern matching with regex
+                                                let labelRegex = /<\s*span[^>]*class\s*=\s*["']label["'][^>]*>(.*?)<\s*\/\s*span\s*>/gi;
+                                                let valueRegex = /<\s*span[^>]*class\s*=\s*["']value["'][^>]*>(.*?)<\s*\/\s*span\s*>/gi;
+                                                let labelMatch, valueMatch;
+                                                // We'll keep matching label/value pairs in parallel
+                                                while ((labelMatch = labelRegex.exec(textData)) !== null &&
+                                                       (valueMatch = valueRegex.exec(textData)) !== null) {
+                                         
+                                                    let label = labelMatch[1] ? labelMatch[1].trim() : "";
+                                                    let val   = valueMatch[1] ? valueMatch[1].trim() : "";
+                                                    // We can still parseValue here if there's a possibility that `val` is a JSON string
+                                                    planDetails.AddRow({
+                                                        attributeLabel: label,
+                                                        attributeValue: parseValue(val)
+                                                    });
+                                                }
+                                            }
+                                         
+                                            // 5) Return final InfoTable
+                                            result = planDetails;
+                                         
+                                        } catch (ex) {
+                                            logger.warn("Error occurred: " + ex.message);
+                                         
+                                            // If something goes wrong, you can store an error in the same InfoTable, or return a string
+                                            // We'll keep it simple and just return an error row in the InfoTable:
+                                            planDetails.AddRow({
+                                                groupName: "Error",
+                                                attributeLabel: "Exception",
+                                                attributeValue: ex.message
+                                            });
+                                            result = planDetails;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="WorkProgressGraph">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        InfoTableData = me.LoadInfoTableData();
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ARN.WorkProgressGraph.DS)
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.WorkProgressGraph.DS"
+                                        });
+                                        let rowCount = InfoTableData.getRowCount();
+                                        for(i=0; i<rowCount; i++)
+                                        {
+                                            let JsonData = {
+                                                Plan_Name : InfoTableData[i].Name,
+                                                Work_Progress : InfoTableData[i].Work_Progress
+                                        	};
+                                            result.AddRow(JsonData);
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

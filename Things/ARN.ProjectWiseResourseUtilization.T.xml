@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.ProjectWiseResourseUtilization.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ARN.ProjectDetails1.DS"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="allProjectsDetails"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="dummyInfotable"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="dummyJson"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="scheduledData"
+                     ordinal="5"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlanDetails">
+                        <ResultType
+                         aspect.dataShape="ARN.PlanDetails.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="oid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlans">
+                        <ResultType
+                         aspect.dataShape="ARN.PlanDetails1.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR:wt.projmgmt.admin.Project2:3303837"
+                             baseType="STRING"
+                             description=""
+                             name="ContainerOid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjects">
+                        <ResultType
+                         aspect.dataShape="ARN.NameValue1.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getScheduleData">
+                        <ResultType
+                         aspect.dataShape="ARN.ScheduleDetailsLevel1.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR:wt.projmgmt.admin.Project2:3303837"
+                             baseType="STRING"
+                             description=""
+                             name="ContainerOid"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="OR:com.ptc.projectmanagement.plan.Plan:3411264"
+                             baseType="STRING"
+                             description=""
+                             name="planOid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getScheduleResourcesData">
+                        <ResultType
+                         aspect.dataShape="ARN.ResourseInfo.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR%3Awt.projmgmt.admin.Project2%3A3337245"
+                             baseType="STRING"
+                             description=""
+                             name="containerOid"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="comp$projectmanagement$OR:com.ptc.projectmanagement.plan.Plan:3337423$OR:com.ptc.projectmanagement.plan.Plan:3337423^OR:com.ptc.projectmanagement.plan.PlanActivity:3337429!*"
+                             baseType="STRING"
+                             description=""
+                             name="jsca_context"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="OR:com.ptc.projectmanagement.plan.Plan:3337423"
+                             baseType="STRING"
+                             description=""
+                             name="planOid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlanDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.PlanDetails.DS"
+                                        });
+                                        
+                                        let pivotRow = {};
+                                        Oid = oid;
+                                        try
+                                        {
+                                        let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                            proxyScheme: undefined,
+                                            headers: {
+                                                authorization: "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                Cookie: "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                Accept: "application/json"
+                                            },
+                                            ignoreSSLErrors: true,
+                                            url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=" + Oid + "&u8=1&AjaxEnabled=thirdLevelNav",
+                                            timeout: 300
+                                        });
+                                        
+                                        let cleaned = windchillData.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+                                        let parsed = JSON.parse(cleaned.split('^')[0].trim());
+                                        
+                                        windchillData = parsed.groups;
+                                        
+                                        let jsonArray = {};
+                                        
+                                        for(let x = 0; x < windchillData[0].rows.length; x++)
+                                        {
+                                            let columns = windchillData[0].rows[x].columns;
+                                            
+                                            for(let y = 0; y < columns.length; y++)
+                                            {
+                                            	jsonArray[columns[y].label] = (columns[y].value == '' || columns[y].value == undefined) ? '--' : columns[y].value;
+                                            }
+                                        }
+                                        me.dummyJson = jsonArray;
+                                            
+                                        let newEntry = 
+                                        {
+                                            Status: getEstimatedFinish(jsonArray,"Status"), // STRING
+                                            Work_Complete: getEstimatedFinish(jsonArray,"% Work Complete"),
+                                            Estimated_Start: getEstimatedFinish(jsonArray,"Estimated Start"),
+                                            Estimated_Finish: getEstimatedFinish(jsonArray,"Estimated Finish"),
+                                            Actual_Start: getEstimatedFinish(jsonArray,"Actual Start"),
+                                            Actual_Finish: getEstimatedFinish(jsonArray,"Actual Finish"),
+                                            Fixed_Cost: undefined, // NUMBER
+                                            Cost: undefined, // NUMBER
+                                            Rolled_Up_Cost: undefined, // NUMBER
+                                            Duration: undefined, // NUMBER
+                                            Effort: undefined, // INTEGER
+                                            Calendar: undefined, // STRING
+                                            Currency_Symbol: undefined, // STRING
+                                            Execution_Control: undefined, // STRING
+                                            Currency_Placement: undefined, // STRING
+                                            Linked_Deliverable: undefined, // BOOLEAN
+                                            Currency_Decimal_Digits: undefined, // INTEGER
+                                            Context: undefined, // STRING
+                                            Created_On: undefined, // DATETIME
+                                            Last_Modified: undefined // DATETIME
+                                        };
+                                        result.AddRow(newEntry);
+                                        }
+                                        catch(e)
+                                        {
+                                            result.AddRow({
+                                                Work_Complete: "--",
+                                                Estimated_Start: "--",
+                                                Estimated_Finish: "--",
+                                                Actual_Start: "--",
+                                                Actual_Finish: "--"
+                                            });
+                                            logger.error("ARN.StatusDashboard.T >>> getPlanDetails >>> Error: "+e+" >>> lineNumber"+e.lineNumber);
+                                        }
+                                        //result = jsonArray;
+                                        
+                                        
+                                        function getEstimatedFinish(json, key)
+                                        {
+                                            if (!json.hasOwnProperty(key)) return "--";
+                                            else
+                                            {
+                                                let val = json[key];
+                                                if (typeof val === "string")  return val;
+                                                else if (typeof val === "object") return val.gui.export_value;
+                                                else return "xcxc";
+                                            }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlans">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /*
+                                        	Service    : getPlans
+                                            Description: This Service gives the plans as an output based on response from POST
+                                            Created By : Shashi Preetham
+                                            Created On : 14-04-2025
+                                        */
+                                        
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.PlanDetails1.DS"
+                                        });
+                                        
+                                        ContainerOid = ContainerOid.replace(/:/g, "%3A");
+                                        
+                                        try
+                                        {
+                                            let Header = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"
+                                            };
+                                        
+                                            let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                                headers: Header /* JSON */,
+                                                ignoreSSLErrors: true /* BOOLEAN */,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.plan.plansTable?ContainerOid="+ContainerOid+"&oid="+ContainerOid+"&u8=1&portlet=component",
+                                                timeout: 300 /* NUMBER {"defaultValue":60} */
+                                            });
+                                        
+                                            let planNames = []; 
+                                            let parts = windchillData.split('ext:qtip=');
+                                        
+                                            for (let i = 1; i < parts.length; i++) 
+                                            {
+                                                let segment = parts[i]; 
+                                                
+                                                let planName = segment.split('a>')[0]; 
+                                                planName = planName.split('>')[0]; 
+                                                planName = planName.replace("\ ",""); 
+                                                planName = planName.replace(/["\\]/g, "");  
+                                        		
+                                        		let oid = parts[i];
+                                        		oid = oid.split('"oid":')[1];
+                                        		oid = oid.split(',"jsca_context":')[0];
+                                        		
+                                                result.AddRow({ planName: planName,  planOid: oid.replace(/"/g, ''), containerOid: ContainerOid});
+                                            } 
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.error("ARN.StatusDashboard.T >>> getPlans >>> Error: "+e+ " >>> lineNumber: "+e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /*
+                                        	Service    : getProjects
+                                            Description: This Service gives the plans as an output based on response from POST
+                                            Created By : Shashi Preetham
+                                            Created On : 14-04-2025
+                                        */
+                                        
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.NameValue1.DS"
+                                        });
+                                        
+                                        try
+                                        {
+                                            let Header = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"
+                                            };
+                                        
+                                            let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                                headers: Header,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/comp/netmarkets.project.list.table?portlet=component",
+                                                timeout: 300
+                                            });
+                                            
+                                            let firstSplit = windchillData.split("PTC.ExtJSONTableConfig.chunk =")[1];
+                                            firstSplit = firstSplit.split(";PTC.ExtJSONTableConfig.totalRows")[0];
+                                            
+                                            let jsonData = JSON.parse(firstSplit);
+                                            
+                                            for(let x = 0; x < jsonData.data.length; x++)
+                                            {
+                                                result.AddRow({Name: jsonData.data[x].name.label, Value: jsonData.data[x].nmActions.params.ContainerOid});
+                                            }  
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.error("ARN.NPI_NPD_Dashboard.T >>> getProjects >>> Error: "+e+ " >>> lineNumber: "+e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getScheduleData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.ScheduleDetailsLevel1.DS"
+                                        });
+                                        
+                                        planOid = planOid.replace(/:/g, "%3A");
+                                        ContainerOid = ContainerOid.replace(/:/g, "%3A");
+                                        
+                                        let Header = {
+                                            "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                            "Accept": "application/json"
+                                        };
+                                        
+                                        let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                            headers: Header,
+                                            ignoreSSLErrors: true,
+                                            url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.viewPlan?u8=1&tableID=projectmanagement.plan.view" +
+                                                "&ContainerOid=" + ContainerOid + "&oid=" + planOid,
+                                            timeout: 300
+                                        });
+                                        
+                                        windchillData = windchillData.split("PTC.ExtJSONTableConfig.initialRows=")[1];
+                                        windchillData = windchillData.split(";PTC.ExtJSONTableConfig.totalRows")[0];
+                                        windchillData = JSON.parse(windchillData);
+                                        
+                                        // Define the allowed phases
+                                        let allowedPhases = ["Concept Phase", "Development Phase", "Validation Phase", "Launch Phase"];
+                                        
+                                        for (let x = 0; x < windchillData.length; x++) {
+                                            let phaseData = windchillData[x];
+                                        
+                                            // Filter by phase name
+                                            if (allowedPhases.includes(phaseData.name)) {
+                                                result.AddRow({
+                                                    phase: phaseData.name,
+                                                    estimatedFinish: phaseData.estimatedFinish,
+                                                    deadline: phaseData.deadline.gui.value,
+                                                    duration: getEstimatedFinish(phaseData, "duration"),
+                                                    estimatedStart: phaseData.estimatedStart,
+                                                    planOid: windchillData[0].oid,
+                                                    containerOid: phaseData.nmActions.params.ContainerOid,
+                                                    _parent: phaseData._parent,
+                                                    jsca_context: phaseData.jsca_context,
+                                                    percentEffortComplete: getEstimatedFinish(phaseData, "percentEffortComplete")
+                                                });
+                                            }
+                                        }
+                                        
+                                        function getEstimatedFinish(json, key) {
+                                            if (!json.hasOwnProperty(key)) return "--";
+                                            let val = json[key];
+                                            if (typeof val === "string") return val;
+                                            if (typeof val === "object") return val.gui.export_value;
+                                            return "--";
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getScheduleResourcesData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.ResourseInfo.DS"  
+                                        });
+                                        
+                                        try {
+                                            let Headers = {
+                                                "authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                "Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                "Accept": "application/json"
+                                            };
+                                        
+                                            let content = "anode=" + jsca_context +
+                                                "&e=" + jsca_context +
+                                                "&actionMethod=expand" +
+                                                "&acquire=row" +
+                                                "&level=2" +
+                                                "&u8=1" +
+                                                "&tableID=projectmanagement.plan.view" +
+                                                //"&ContainerOid=" + containerOid +
+                                                "&oid=" + planOid;
+                                        
+                                            let windchillData = Resources["ContentLoaderFunctions"].PostText({
+                                                headers: Headers,
+                                                ignoreSSLErrors: true,
+                                                url: "https://windchill.arorian.com/Windchill/ptc1/comp/projectmanagement.viewPlan",
+                                                content: content,
+                                                timeout: 300,
+                                                contentType: "application/x-www-form-urlencoded"
+                                            });
+                                        
+                                            windchillData = windchillData.split("<!-- BEGIN PURE JSON -->")[1];
+                                            windchillData = windchillData.split("<!-- END PURE JSON -->")[0];
+                                            windchillData = JSON.parse(windchillData);
+                                        
+                                            for (let x = 0; x < windchillData.rows.length; x++) {
+                                                let phaseChildData = windchillData.rows[x];
+                                        
+                                                result.AddRow({
+                                                    phase: phaseChildData.name,                             
+                                                    estimatedFinish: phaseChildData.estimatedFinish,           
+                                                    deadline: phaseChildData.deadline.gui.value,               
+                                                    duration: getFieldValue(phaseChildData, "duration"),       
+                                                    estimatedStart: phaseChildData.estimatedStart,             
+                                                    Resource: getFieldValue(phaseChildData, "resources"),      
+                                                    planOid: phaseChildData.oid,                               
+                                                    containerOid: phaseChildData.nmActions.params.ContainerOid 
+                                                });
+                                            }
+                                        } catch (e) {
+                                            logger.error("Error: " + e + " >>> Error line Number: " + e.lineNumber);
+                                        }
+                                        
+                                        
+                                        function getFieldValue(json, key) {
+                                            if (!json.hasOwnProperty(key)) return "--";
+                                            let val = json[key];
+                                            if (typeof val === "string") return val;
+                                            if (val && val.gui && val.gui.value) return val.gui.value;
+                                            return "--";
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="allProjectsDetails"></AlertDefinitions>
+                <AlertDefinitions
+                 name="dummyInfotable"></AlertDefinitions>
+                <AlertDefinitions
+                 name="dummyJson"></AlertDefinitions>
+                <AlertDefinitions
+                 name="scheduledData"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <dummyInfotable>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions></FieldDefinitions>
+                            </DataShape>
+                            <Rows></Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2025-05-06T08:31:49.127Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </dummyInfotable>
+                <scheduledData>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions></FieldDefinitions>
+                            </DataShape>
+                            <Rows></Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2025-05-06T08:31:49.127Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </scheduledData>
+                <dummyJson>
+                    <Value>
+                    <![CDATA[
+                    {"Status":{"renderer":"jsca.columns.imageRenderer","gui":{"styleClasses":"","img":"netmarkets/images/green.gif","text":"Green","id":"","comparable":"Green","url":"","export_value":"Green"}},"Actual Start":"3/24/25 08:00 AM","Rolled up Cost":"\u20b90","Effort":{"gui":{"html":"4,121.6 hrs","comparable":4121.6,"export_value":"4,121.6 hrs"}},"% Work Complete":{"renderer":"jsca.columns.numericRenderer","gui":{"displayValue":"0%","comparable":0,"export_value":"0%"}},"Actual Finish":"--","Fixed Cost":"\u20b90","Duration":{"gui":{"html":"175 days","comparable":"175 days"}},"Estimated Finish":"11/21/25 05:00 PM","Cost":"\u20b90","Estimated Start":"3/24/25 08:00 AM"}
+                    ]]>
+                    </Value>
+                    <Timestamp>2025-05-02T06:19:38.240Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </dummyJson>
+                <allProjectsDetails>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Actual_Finish"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Actual_Start"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Cost"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Duration"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Effort"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Estimated_Finish"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Estimated_Start"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="name"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="oid"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="productType"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Project_Type"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="projectStatus"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Status"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows></Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2025-05-06T08:31:49.127Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </allProjectsDetails>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

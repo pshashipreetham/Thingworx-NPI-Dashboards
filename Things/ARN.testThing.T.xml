@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.testThing.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetJson">
+                        <ResultType
+                         aspect.dataShape="ARN.planDettails.DS"
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Oid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlanInfo">
+                        <ResultType
+                         aspect.dataShape="WindchillAttributesDS"
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015"
+                             baseType="STRING"
+                             description=""
+                             name="Oid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPlansDetails">
+                        <ResultType
+                         aspect.dataShape="ARN.PlanDetails.DS"
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="OR%3Acom.ptc.projectmanagement.plan.Plan%3A3304015"
+                             baseType="STRING"
+                             description=""
+                             name="Oid"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetJson">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /*
+                                            Service    : getPlans
+                                            Description: This service calls the Windchill endpoint, cleans the returned data,
+                                                         parses the JSON dynamically, transforms the keys to match the Data Shape,
+                                                         and builds an InfoTable with the row data. The Data Shape used is ARN.planDettails.DS.
+                                            Output     : INFOTABLE (ARN.planDettails.DS)
+                                            Created By : Your Name
+                                            Created On : YYYY-MM-DD
+                                        */
+                                        
+                                        try {
+                                        	var planInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "ARN.PlanDetails.DS"
+                                        	});
+                                        	// 1. Encode Oid for URL safety.
+                                        	Oid = Oid.replace(/:/g, "%3A");
+                                        
+                                        	// 2. Define the request headers.
+                                        	var headers = {
+                                        		"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        		"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        		"Accept": "application/json"
+                                        	};
+                                        
+                                        	// 3. Set up the POST parameters.
+                                        	var params = {
+                                        		proxyScheme: undefined,
+                                        		headers: headers,
+                                        		ignoreSSLErrors: true,
+                                        		url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=" + Oid + "&u8=1&AjaxEnabled=thirdLevelNav",
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	// 4. Retrieve the raw response string.
+                                        	var windchillData = Resources["ContentLoaderFunctions"].PostText(params);
+                                        
+                                        	// 5. Clean the raw data.
+                                        	// Remove HTML tags, replace &nbsp; with a space, and trim any trailing whitespace.
+                                        //	windchillData = windchillData.split("}")[1];
+                                        //    windchillData = windchillData.split("}")[1];
+                                        	result = windchillData;
+                                        
+                                        	//	planInfoTable.AddRow(row);
+                                        	//	result = planInfoTable;
+                                        } catch (e) {
+                                        	logger.error("getPlans Error: " + e + " >>> lineNumber: " + e.lineNumber);
+                                        	result = {
+                                        		error: e.toString()
+                                        	};
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlanInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.PlanDetails.DS"
+                                        });
+                                        
+                                        Oid = Oid.replace(/:/g, "%3A");
+                                        
+                                        try {
+                                        	var params = {
+                                        		proxyScheme: undefined,
+                                        		headers: {
+                                        			authorization: "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        			Cookie: "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        			Accept: "application/json"
+                                        		},
+                                        		ignoreSSLErrors: true,
+                                        		url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=" + Oid + "&u8=1&AjaxEnabled=thirdLevelNav",
+                                        		timeout: 300
+                                        	};
+                                        	var windchillData = Resources["ContentLoaderFunctions"].PostText(params);
+                                        	var cleaned = windchillData.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+                                        	var result1 = JSON.parse(cleaned.split('^')[0].trim());
+                                            result1 = result1.groups;
+                                            result = result1;
+                                        
+                                        
+                                        
+                                        
+                                        	//for(let x = 0; x < windchillData.length; x++)
+                                        	//{
+                                        	//    let phaseData =  windchillData[x];
+                                        	//
+                                        	//    result.AddRow({
+                                        	//        phase: phaseData.name, // STRING
+                                        	//        estimatedFinish: phaseData.estimatedFinish, // STRING
+                                        	//        deadline: phaseData.deadline.gui.value, // STRING
+                                        	//        duration: phaseData.duration.gui.html, // STRING
+                                        	//        estimatedStart: phaseData.estimatedStart, // STRING
+                                        	//        planOid: phaseData.oid, // STRING
+                                        	//        containerOid: phaseData.nmActions.params.ContainerOid, // STRING
+                                        	//        _parent: phaseData._parent,
+                                        	//        jsca_context: phaseData.jsca_context
+                                        	//    });
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.warn(e);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPlansDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.PlanDetails.DS"
+                                        });
+                                        
+                                        let pivotRow = {};
+                                        Oid = Oid.replace(/:/g, "%3A");
+                                        
+                                        let windchillData = Resources["ContentLoaderFunctions"].PostText( {
+                                            proxyScheme: undefined,
+                                            headers: {
+                                                authorization: "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                                Cookie: "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                                Accept: "application/json"
+                                            },
+                                            ignoreSSLErrors: true,
+                                            url: "https://windchill.arorian.com/Windchill/ptc1/tcomp/attributesTable?oid=" + Oid + "&u8=1&AjaxEnabled=thirdLevelNav",
+                                            timeout: 300
+                                        });
+                                        
+                                        let cleaned = windchillData.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+                                        let parsed = JSON.parse(cleaned.split('^')[0].trim());
+                                        
+                                        windchillData = parsed.groups;
+                                        
+                                        let jsonArray = {};
+                                        
+                                        for(let x = 0; x < windchillData[0].rows.length; x++)
+                                        {
+                                            let columns = windchillData[0].rows[x].columns;
+                                            
+                                            for(let y = 0; y < columns.length; y++)
+                                            {
+                                            	jsonArray[columns[y].label] = (columns[y].value == '' || columns[y].value == undefined) ? '--' : columns[y].value;
+                                            }
+                                        }
+                                        
+                                        
+                                        result =  jsonArray;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

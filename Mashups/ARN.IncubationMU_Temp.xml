@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ARN.IncubationMU_Temp"
+         projectName="Arorian"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_IncubationInfo" : {
+                  "DataName" : "Things_IncubationInfo",
+                  "EntityName" : "IncubationInfo",
+                  "EntityType" : "Things",
+                  "Id" : "f3d07c53-cec5-4f3c-9bc5-c20a26573033",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "487ccd8e-1f7b-452a-b487-593550eb3d4e",
+                    "Name" : "getIncubationInfo",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getIncubationInfo"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "f2822fd0-1a7a-4a74-ae28-35dd50b4df82",
+                    "Name" : "getDocName",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getDocName"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "e8942f8f-6e10-4dbd-b732-07840be1b612",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getIncubationInfo",
+                "SourceSection" : "Things_IncubationInfo",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-59",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9178c01d-931d-443f-b84e-d632393f0ba5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getDocName",
+                "SourceSection" : "Things_IncubationInfo",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-60",
+                "TargetSection" : ""
+              }, {
+                "Id" : "19124ef2-bddb-4350-9940-4fdbdd9f83b4",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "itemName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-59",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getDocName",
+                "TargetSection" : "Things_IncubationInfo"
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_IncubationInfo",
+                "EventHandlerService" : "getIncubationInfo",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "96efe1b9-e48d-44ef-87b1-3ae19308f0f5"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_IncubationInfo",
+                "EventHandlerService" : "getDocName",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedTextChanged",
+                "EventTriggerId" : "ptcsdropdown-59",
+                "EventTriggerSection" : "",
+                "Id" : "db49609f-341f-4af0-9211-cd275165bbec"
+              } ],
+              "Reminders" : [ ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "LegacyFocus" : false,
+                  "Margin" : "5",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "Master" : "ARN.HeaderFooter.M",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "flexcontainer-10" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-11" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f4f6f6",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-12" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(200,223,223,1)",
+                              "border-color" : "rgba(255,255,255,1)",
+                              "border-radius" : "12px",
+                              "border-style" : "groove",
+                              "border-width" : "2px",
+                              "padding-bottom" : "15px",
+                              "padding-left" : "15px",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-13" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-14" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-15" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-17" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-18" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-2" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-21" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(37,182,148,1)",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-22" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-23" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(200,223,223,1)",
+                              "border-color" : "rgba(255,255,255,1)",
+                              "border-radius" : "10px",
+                              "border-style" : "ridge",
+                              "border-width" : "1px",
+                              "padding-bottom" : "15px",
+                              "padding-left" : "15px",
+                              "padding-right" : "15px",
+                              "padding-top" : "15px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-24" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-25" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(200,223,223,1)",
+                              "border-radius" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-26" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-27" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-28" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-29" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-3" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-39" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-4" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-42" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-45" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "6px",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-52" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-64" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-65" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-67" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-68" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-70" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-71" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-72" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-73" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "ptcslabel-30" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "#0d6195",
+                              "font-size" : "28px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_baseVersion" : "9.4.0-b49",
+                  "id_index" : 75,
+                  "secureExpressionsOnly" : true,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CollapseTabIcon" : "",
+                    "DisplayName" : "container-2",
+                    "EnableContainerUnload" : false,
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "ExpandTabIcon" : "",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "LazyLoading" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "Overlay" : false,
+                    "OverrideChildrenAbsolute" : false,
+                    "ResponsiveLayout" : true,
+                    "Scrolling" : "auto-scroll",
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "ShowVerticalScrollbar" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Top" : 0,
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "_baseVersion" : "9.4.0-b49",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisplayName" : "container-29",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-29",
+                      "LastContainer" : false,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "center",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "60px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "60px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "center",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisclosureControl" : "show-more",
+                        "DisplayName" : "ptcs-label-30",
+                        "HorizontalAlignment" : "left",
+                        "Id" : "ptcslabel-30",
+                        "LabelText" : "Incubation Dashboard",
+                        "LabelType" : "label",
+                        "LastContainer" : false,
+                        "Left" : 252.171875,
+                        "Margin" : "5",
+                        "MultiLine" : true,
+                        "PreserveWhiteSpace" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "Top" : 115,
+                        "Type" : "ptcslabel",
+                        "UseTheme" : true,
+                        "VerticalAlignment" : "flex-start",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Label",
+                        "_baseVersion" : "9.4.0",
+                        "overflowShowLessTxt" : "[[showLess]]",
+                        "overflowShowMoreTxt" : "[[showMore]]"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisplayName" : "container-3",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : false,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "_baseVersion" : "9.4.0-b49",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-end",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "109px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "109px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "fieldset-58",
+                        "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle",
+                        "FieldsetStyle" : "DefaultFieldsetStyle",
+                        "Height" : 81,
+                        "Id" : "fieldset-58",
+                        "LastContainer" : false,
+                        "Left" : 0,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Title" : "",
+                        "Top" : 0,
+                        "Type" : "fieldset",
+                        "Visible" : true,
+                        "Width" : 828,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Fieldset",
+                        "_baseVersion" : "9.4.0"
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllLabel" : "[[all]]",
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                          "ClearSelectionItem" : false,
+                          "ClearSelectionLabel" : "[[None]]",
+                          "CriteriaMessage" : "",
+                          "CriteriaMessageDetails" : "",
+                          "Disabled" : false,
+                          "DisplayField" : "Name",
+                          "DisplayFieldBaseType" : "STRING",
+                          "DisplayName" : "ptcs-dropdown-59",
+                          "FilterHintText" : "Filter",
+                          "HintText" : "[[Select]]",
+                          "Id" : "ptcsdropdown-59",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "Product Category:",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 5.885417000000018,
+                          "ListFormat_StateParameters" : [ ],
+                          "ListMarginTop" : 8,
+                          "ListMaxWidth" : 330,
+                          "Margin" : "5",
+                          "MultiSelect" : false,
+                          "RequiredMessage" : "[[Widgets.Validation.ListSelection.RequiredMessage]]",
+                          "ResponsiveLayout" : false,
+                          "RowHeight" : 34,
+                          "SelectAllLabel" : "[[selectAll]]",
+                          "SelectedLabel" : "[[selected]]",
+                          "ShowDataLoading" : true,
+                          "ShowListFilter" : false,
+                          "ShowValidationCriteria" : false,
+                          "ShowValidationFailure" : false,
+                          "ShowValidationSuccess" : false,
+                          "StateField" : "Name",
+                          "SuccessMessage" : "",
+                          "SuccessMessageDetails" : "",
+                          "TabSequence" : 0,
+                          "Top" : 7.812510505859393,
+                          "Type" : "ptcsdropdown",
+                          "UseTheme" : true,
+                          "ValidationCriteriaIcon" : "cds:icon_info",
+                          "ValidationFailureIcon" : "cds:icon_error",
+                          "ValidationState" : "undefined",
+                          "ValidationSuccessIcon" : "cds:icon_success",
+                          "ValueField" : "Name",
+                          "ValueRequired" : false,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "DropDown",
+                          "_baseVersion" : "9.4.0"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllLabel" : "[[all]]",
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                          "ClearSelectionItem" : false,
+                          "ClearSelectionLabel" : "[[None]]",
+                          "CriteriaMessage" : "",
+                          "CriteriaMessageDetails" : "",
+                          "Disabled" : false,
+                          "DisplayField" : "documentName",
+                          "DisplayFieldBaseType" : "STRING",
+                          "DisplayName" : "ptcs-dropdown-60",
+                          "FilterHintText" : "Filter",
+                          "HintText" : "[[Select]]",
+                          "Id" : "ptcsdropdown-60",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "Document List:",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 289.8046674882812,
+                          "ListFormat_StateParameters" : [ ],
+                          "ListMarginTop" : 8,
+                          "ListMaxWidth" : 330,
+                          "Margin" : "5",
+                          "MultiSelect" : false,
+                          "RequiredMessage" : "[[Widgets.Validation.ListSelection.RequiredMessage]]",
+                          "ResponsiveLayout" : false,
+                          "RowHeight" : 34,
+                          "SelectAllLabel" : "[[selectAll]]",
+                          "SelectedLabel" : "[[selected]]",
+                          "ShowDataLoading" : true,
+                          "ShowListFilter" : false,
+                          "ShowValidationCriteria" : false,
+                          "ShowValidationFailure" : false,
+                          "ShowValidationSuccess" : false,
+                          "SuccessMessage" : "",
+                          "SuccessMessageDetails" : "",
+                          "TabSequence" : 0,
+                          "Top" : 6.822917000000018,
+                          "Type" : "ptcsdropdown",
+                          "UseTheme" : true,
+                          "ValidationCriteriaIcon" : "cds:icon_info",
+                          "ValidationFailureIcon" : "cds:icon_error",
+                          "ValidationState" : "undefined",
+                          "ValidationSuccessIcon" : "cds:icon_success",
+                          "ValueField" : "documentName",
+                          "ValueRequired" : false,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "DropDown",
+                          "_baseVersion" : "9.4.0"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DataBaseType" : "STRING",
+                          "Disabled" : false,
+                          "DisclosureControl" : "disclosure",
+                          "DisplayName" : "ptcs-valuedisplay-61",
+                          "FillContainer" : true,
+                          "Height" : 51,
+                          "HorizontalAlignment" : "left",
+                          "Id" : "ptcsvaluedisplay-61",
+                          "ImageDisclosureControl" : "button",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "TAT:",
+                          "LabelAlignment" : "left",
+                          "LabelType" : "label",
+                          "LastContainer" : false,
+                          "Left" : 573,
+                          "Margin" : "5",
+                          "ModalHeight" : 380,
+                          "ModalWidth" : 600,
+                          "MultiLine" : true,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextIfNoValue" : "",
+                          "Top" : 0,
+                          "Type" : "ptcsvaluedisplay",
+                          "UseTheme" : true,
+                          "ValueFormat" : {
+                            "FormatString" : "full",
+                            "dependentField" : "result",
+                            "fixed" : false,
+                            "formatInfo" : {
+                              "StateFormats" : [ ]
+                            },
+                            "renderer" : "STRING",
+                            "roundingEnabled" : false,
+                            "showDependentField" : true
+                          },
+                          "ValueFormat_StateParameters" : [ ],
+                          "VerticalAlignment" : "flex-start",
+                          "Visible" : true,
+                          "Width" : 274,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Value Display",
+                          "_baseVersion" : "9.4.0",
+                          "overflowShowLessTxt" : "[[showLess]]",
+                          "overflowShowMoreTxt" : "[[showMore]]"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisplayName" : "container-10",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-10",
+                      "LastContainer" : true,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : true,
+                      "Scrolling" : "auto-scroll",
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "default",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "CollapseTabIcon" : "",
+                        "DisplayName" : "container-72",
+                        "EnableContainerUnload" : false,
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "ExpandTabIcon" : "",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-72",
+                        "LastContainer" : false,
+                        "LazyLoading" : false,
+                        "Margin" : "",
+                        "Overlay" : false,
+                        "OverrideChildrenAbsolute" : false,
+                        "ResponsiveLayout" : true,
+                        "Scrolling" : "auto-scroll",
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "ShowVerticalScrollbar" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "307px",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "307px",
+                        "flex-shrink" : 1,
+                        "flex-size" : "fixed",
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer-fixed",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "fieldset-69",
+                          "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle",
+                          "FieldsetStyle" : "DefaultFieldsetStyle",
+                          "Height" : 100,
+                          "Id" : "fieldset-69",
+                          "LastContainer" : false,
+                          "Left" : 7.0052490234375,
+                          "Margin" : "5",
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "Title" : "",
+                          "Top" : 5.1875,
+                          "Type" : "fieldset",
+                          "Visible" : true,
+                          "Width" : 300,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Fieldset",
+                          "_baseVersion" : "9.4.0"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "DataField" : "Label",
+                            "DataFieldDateFormat" : "",
+                            "DataFieldFormat" : "0000.0",
+                            "DataFieldType" : "string",
+                            "DataStyle_StateParameters" : [ ],
+                            "Disabled" : false,
+                            "DisplayName" : "ptcs-chartpie-75",
+                            "DonutHoleSize" : 0,
+                            "DonutSelectionLabelType" : "large-title",
+                            "EmptyChartIcon" : "cds:icon_not_visible",
+                            "EmptyChartLabel" : "[[ChartStateLabelEmpty]]",
+                            "EndAngle" : 360,
+                            "ErrorStateIcon" : "cds:icon_error",
+                            "ErrorStateLabel" : "[[ChartStateLabelError]]",
+                            "FillContainer" : true,
+                            "Height" : 310,
+                            "HideLegend" : false,
+                            "HideLegendLabel" : "[[hideLegend]]",
+                            "HideNotes" : false,
+                            "HighlightSelection" : false,
+                            "Id" : "ptcschartpie-75",
+                            "Label" : "INC-AC-CFT-0000018307",
+                            "LabelAlignment" : "left",
+                            "LabelPosition" : "top",
+                            "LabelType" : "sub-header",
+                            "LastContainer" : false,
+                            "Left" : 0,
+                            "LegendAlignment" : "start",
+                            "LegendFilter" : false,
+                            "LegendMarkerShapes" : "square",
+                            "LegendMaxWidth" : 736,
+                            "LegendPosition" : "right",
+                            "LoadingIcon" : "cds:icon_chart_loading_pie",
+                            "Margin" : "5",
+                            "NoDataSourceIcon" : "cds:icon_bind",
+                            "NoDataSourceLabel" : "[[ChartStateLabelNoData]]",
+                            "Notes" : "",
+                            "NotesAlignment" : "left",
+                            "NotesPosition" : "bottom",
+                            "PercentileValues" : false,
+                            "PieSlicePadding" : 0,
+                            "PieSliceRadius" : 0,
+                            "PolarView" : false,
+                            "ResponsiveLayout" : false,
+                            "SelectionMode" : "none",
+                            "ShowDataLoading" : true,
+                            "ShowDonutSliceLabel" : false,
+                            "ShowHideLegend" : false,
+                            "ShowHideLegendButtonType" : "transparent",
+                            "ShowLegendLabel" : "[[showLegend]]",
+                            "ShowValues" : false,
+                            "SparkView" : false,
+                            "StartAngle" : 0,
+                            "TabSequence" : 0,
+                            "Top" : 1.050585939310622E-5,
+                            "Type" : "ptcschartpie",
+                            "UseTheme" : true,
+                            "ValueField" : "Value",
+                            "ValueFormat" : "0000.0",
+                            "ValuesPosition" : "marker",
+                            "ValuesTooltip" : "[[PieChartDefaultTooltip]]",
+                            "Visible" : true,
+                            "Width" : 300,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Pie Chart",
+                            "_baseVersion" : "9.4.0"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "CollapseTabIcon" : "",
+                        "DisplayName" : "container-73",
+                        "EnableContainerUnload" : false,
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "ExpandTabIcon" : "",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-73",
+                        "LastContainer" : true,
+                        "LazyLoading" : false,
+                        "Margin" : "",
+                        "Overlay" : false,
+                        "OverrideChildrenAbsolute" : false,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "ShowVerticalScrollbar" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "",
+                        "flex-shrink" : 1,
+                        "flex-size" : "default",
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : true,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "fieldset-74",
+                          "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle",
+                          "FieldsetStyle" : "DefaultFieldsetStyle",
+                          "Height" : 100,
+                          "Id" : "fieldset-74",
+                          "LastContainer" : false,
+                          "Left" : 82.9818115234375,
+                          "Margin" : "5",
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "Title" : "",
+                          "Top" : 30.1875,
+                          "Type" : "fieldset",
+                          "Visible" : true,
+                          "Width" : 300,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Fieldset",
+                          "_baseVersion" : "9.4.0"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisplayName" : "container-68",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-68",
+                      "LastContainer" : false,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "1px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "1px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "ALWAYS",
+                    "DefaultNumberEvaluation" : false,
+                    "DisableInitialOutput" : false,
+                    "DisplayName" : "projectName",
+                    "Expression" : "Output = projectName;",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-48",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.4.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "projectName",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "ALWAYS",
+                    "DefaultNumberEvaluation" : false,
+                    "DisableInitialOutput" : false,
+                    "DisplayName" : "planeName",
+                    "Expression" : "Output = planName;",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-49",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.4.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "planName",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "ALWAYS",
+                    "DefaultNumberEvaluation" : false,
+                    "DisableInitialOutput" : false,
+                    "DisplayName" : "EstimatedFinish",
+                    "Expression" : "let Output = jsonData[\"Estimated Finish\"].gui.value;\n",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-53",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.4.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "JSON",
+                      "Description" : "",
+                      "ParameterName" : "jsonData",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "ALWAYS",
+                    "DefaultNumberEvaluation" : false,
+                    "DisableInitialOutput" : false,
+                    "DisplayName" : "DeliverablesLabel",
+                    "Expression" : "Output = input;\nif(input.includes(\"Phase\")) Output = input + \" Gate Deliverables\";",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-55",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.4.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "input",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

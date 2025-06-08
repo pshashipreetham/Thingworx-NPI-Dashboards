@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="DataTableThing"
+         enabled="true"
+         homeMashup="DataTableEditor"
+         identifier=""
+         inheritedValueStream=""
+         name="AeroInternalTestingDataTable"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="DataTable"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {"fieldDefinitions":{"Category":{"name":"Category","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":2},"Value":{"name":"Value","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":1},"Plan":{"name":"Plan","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":3},"Name":{"name":"Name","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":0}}}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape>
+                            <![CDATA[
+                            AeroInternalTestingDS
+                            ]]>
+                            </dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="gettostoredata">
+                        <ResultType
+                         aspect.dataShape="ARN.StoreDataDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SortbyCategory">
+                        <ResultType
+                         aspect.dataShape="AeroInternalTestingDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="StoreViaService">
+                        <ResultType
+                         aspect.dataShape="ARN.ScheduleData.DS"
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="WorkStatus">
+                        <ResultType
+                         aspect.dataShape="WorkStatusCompleted"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="gettostoredata">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // 1. Call external service
+                                        var rawData = Things["ARN.NPI_NPD_Dashboard.T"].processPlanData();
+                                        
+                                        // 2. Initialize
+                                        var planName = "";
+                                        var dataRows = [];
+                                        
+                                        // 3. Safe getter
+                                        function safeGet(obj, pathArr, defaultVal) {
+                                            try {
+                                                for (var i = 0; i < pathArr.length; i++) {
+                                                    if (obj[pathArr[i]] === undefined || obj[pathArr[i]] === null) {
+                                                        return defaultVal;
+                                                    }
+                                                    obj = obj[pathArr[i]];
+                                                }
+                                                return obj;
+                                            } catch (e) {
+                                                return defaultVal;
+                                            }
+                                        }
+                                        
+                                        // 4. Helper to add row
+                                        function addRow(name, value, plan, category) {
+                                            var row = {
+                                                Name: name || "-",
+                                                Value: value || "-",
+                                                Plan: plan || "-",
+                                                Category: category || "-"
+                                            };
+                                            dataRows.push(row);
+                                        }
+                                        
+                                        // 5. Get plan name safely
+                                        planName = safeGet(rawData, ["Attributes", "Name"], "-");
+                                        
+                                        // 6. Sections to process
+                                        var sections = ["Attributes", "Schedule", "Preferences", "System"];
+                                        
+                                        for each (var section in sections) {
+                                            var sectionObj = rawData[section];
+                                        
+                                            if (sectionObj && typeof sectionObj === "object") {
+                                                var keys = Object.keys(sectionObj);
+                                                for each (var key in keys) {
+                                                    var val = sectionObj[key];
+                                        
+                                                    // If object, check for gui display
+                                                    if (typeof val === "object" && val !== null && val.gui) {
+                                                        var gui = val.gui;
+                                                        val = gui.displayValue || gui.text || gui.img || "-";
+                                                    } else if (val === null || val === undefined || val.toString() === "[object UniqueTag]") {
+                                                        val = "-";
+                                                    }
+                                        
+                                                    addRow(key, val, planName, section);
+                                                }
+                                            }
+                                        }
+                                        
+                                        // 7. Store to DataTable
+                                        for each (var rowData in dataRows) {
+                                            Things["AeroInternalTestingDataTable"].CreateDataTableEntry({
+                                                values: rowData
+                                            });
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SortbyCategory">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var query = {
+                                            "filters": {
+                                                "type": "EQ",
+                                                "fieldName": "Category",
+                                                "value": undefined // No filtering; just sorting
+                                            },
+                                            "sorts": [
+                                                {
+                                                    "fieldName": "Category",
+                                                    "isDescending": false // Set to true if you want descending order
+                                                }
+                                            ]
+                                        };
+                                        
+                                        var result = me.GetDataTableEntries({
+                                            maxItems: 500, // or whatever number you prefer
+                                            query: query
+                                        });
+                                        
+                                        result.RemoveField("key");
+                                        result.RemoveField("location");
+                                        result.RemoveField("source");
+                                        result.RemoveField("sourceType");
+                                        result.RemoveField("tags");
+                                        result.RemoveField("timestamp");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="StoreViaService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dataToStore = Things["Test_ARN_Processdata"].test();
+                                        
+                                        Things["AeroInternalTestingDataTable"].AddDataTableEntries({
+                                            values: dataToStore
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="WorkStatus">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Create result InfoTable using your DataShape
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WorkStatusCompleted"
+                                        });
+                                        
+                                        // Get data from DataTable
+                                        let entries = Things["AeroInternalTestingDataTable"].GetDataTableEntries();
+                                        
+                                        for (let i = 0; i < entries.rows.length; i++) {
+                                            let row = entries.rows[i];
+                                            
+                                            if (row.Name === "% Work Complete") {
+                                                // Remove % and convert to number
+                                                let completed = parseFloat(row.Value.replace('%', ''));
+                                                let remaining = 100 - completed;
+                                        
+                                                // Add to result table
+                                                result.AddRow({ WorkStatus: "Completed", Value: completed.toString() });
+                                                result.AddRow({ WorkStatus: "Remaining", Value: remaining.toString() });
+                                                break;
+                                            }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

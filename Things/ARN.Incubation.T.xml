@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ARN.Incubation.T"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="JSON"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="responseData"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCalculatedTAT">
+                        <ResultType
+                         aspect.dataShape="ARN.TAT.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="Air Conditioner"
+                             baseType="STRING"
+                             description=""
+                             name="ProductCategory"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocumentHistoryFilteredDataInfotable">
+                        <ResultType
+                         aspect.dataShape="ARN.DocumentsHistoryData.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="AirConditioner"
+                             baseType="STRING"
+                             description=""
+                             name="ProductCategory"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocumentsByFilters">
+                        <ResultType
+                         aspect.dataShape="ARN.Incubation.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="product"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="projectType"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocumentsHTMLData">
+                        <ResultType
+                         aspect.dataShape="ARN.DocumentsHistoryData.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocumentStateCount">
+                        <ResultType
+                         aspect.dataShape="ARN.IncubationCount.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="Infotable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDocumentTimelineHistory">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getIncubationDocuments">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProductCategories">
+                        <ResultType
+                         aspect.dataShape="ARN.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProductsByProjectType">
+                        <ResultType
+                         aspect.dataShape="ARN.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="projectType"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjectType">
+                        <ResultType
+                         aspect.dataShape="ARN.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="processResponseData_Infotable">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCalculatedTAT">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "DocumentHistoryWithDiff",
+                                            dataShapeName: "ARN.TAT.DS"
+                                        });
+                                        
+                                        resultTable.AddField({ name: "diffHours", baseType: "NUMBER" });
+                                        
+                                        var getDocumentHistoryFilteredDataInfotable = me.getDocumentHistoryFilteredDataInfotable({
+                                            ProductCategory: ProductCategory
+                                        });
+                                        
+                                        let rows = getDocumentHistoryFilteredDataInfotable.rows.toArray();
+                                        
+                                        rows.forEach(function(row) {
+                                            let diffHours = 0;
+                                        
+                                            try {
+                                                let modifiedByMatch = row.ModifiedBy && row.ModifiedBy.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
+                                                let lastModifiedMatch = row.LastModified && row.LastModified.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
+                                        
+                                                if (modifiedByMatch && lastModifiedMatch) {
+                                                    let modifiedByDate = new Date(modifiedByMatch[0].replace(" ", "T"));
+                                                    let lastModifiedDate = new Date(lastModifiedMatch[0].replace(" ", "T"));
+                                        
+                                                    if (!isNaN(modifiedByDate.getTime()) && !isNaN(lastModifiedDate.getTime())) {
+                                                        let msDiff = modifiedByDate - lastModifiedDate;
+                                                        diffHours = msDiff > 0 ? (msDiff / (1000 * 60 * 60)) : 0;
+                                                        diffHours = Math.round(diffHours * 100) / 100;
+                                                    }
+                                                }
+                                            } catch (err) {
+                                                logger.warn("Error parsing row " + row.Name + ": " + err.message);
+                                            }
+                                        
+                                            resultTable.AddRow({
+                                                Name: row.Name,
+                                                diffHours: diffHours
+                                            });
+                                        });
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocumentHistoryFilteredDataInfotable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let allDocuments = me.getDocumentsHTMLData();  
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "FilteredDocuments",
+                                            dataShapeName: "ARN.DocumentsHistoryData.DS"  
+                                        });
+                                        
+                                        if (ProductCategory && ProductCategory.trim().length > 0) {
+                                          
+                                            let filteredRows = allDocuments.rows.toArray().filter(function(item) {
+                                                return item.State === "Approved" &&
+                                                       item.EquipmentType &&
+                                                       item.EquipmentType.toLowerCase().includes(ProductCategory.toLowerCase());
+                                            });
+                                        
+                                        
+                                            filteredRows.forEach(function(row) {
+                                                resultTable.AddRow({
+                                                    Name: row.Name,
+                                                    State: row.State,
+                                                    LastModified: row.LastModified,
+                                                    ModifiedBy: row.ModifiedBy,
+                                                    EquipmentType: row.EquipmentType
+                                                });
+                                            });
+                                        }
+                                        
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocumentsByFilters">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = me.processResponseData_Infotable();
+                                        
+                                        // Step 1: Dynamically build filter list
+                                        let filters = [];
+                                        
+                                        if (product !== null && product !== undefined) {
+                                        	filters.push({
+                                        		type: "EQ",
+                                        		fieldName: "Productcategory",
+                                        		value: product
+                                        	});
+                                        }
+                                        
+                                        if (projectType !== null && projectType !== undefined) {
+                                        	filters.push({
+                                        		type: "EQ",
+                                        		fieldName: "ComArorianWindchillLivpureProjctType",
+                                        		value: projectType
+                                        	});
+                                        }
+                                        
+                                        // Step 3: Run the query
+                                        let documents = Resources["InfoTableFunctions"].Query({
+                                        	t: data,
+                                        	query: {
+                                        		filters: {
+                                        			"type": "And",
+                                        			"filters": filters
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        // Step 4: Return result
+                                        result = documents;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocumentsHTMLData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Header = {
+                                        	"authorization": "Basic RFBUVXNlcjpEUFRBZG1pbg==",
+                                        	"Cookie": "JSESSIONID=C6C0C70234E33F692340A9E0F52CA686.tomcat1",
+                                        	"Accept": "application/json"
+                                        };
+                                        
+                                        let urls = [
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3502762&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3468061&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3353786&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3303062&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3022653&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3042856&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010440&u8=1&AjaxEnabled=thirdLevelNav",
+                                        	"https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3010406&u8=1&AjaxEnabled=thirdLevelNav"
+                                        ];
+                                        
+                                        // Hardcoded Names
+                                        let names = [
+                                        	"INC-AC-CFT-0000018307",
+                                        	"INC-AC-CFT-0000017946",
+                                        	"INC-AC-CFT-0000017362",
+                                        	"INC-AC-CFT-0000016894",
+                                        	"INC-AC-CFT-0000015107",
+                                        	"INC-CT-CFT-0000015966",
+                                        	"INC-CT-CFT-0000014986",
+                                        	"INC-CT-CFT-0000014979"
+                                        ];
+                                        
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "HistoryTable",
+                                        	dataShapeName: "ARN.DocumentsHistoryData.DS"
+                                        });
+                                        
+                                        for (let i = 0; i < urls.length; i++) {
+                                        	let currentUrl = urls[i];
+                                        
+                                        	let params = {
+                                        		proxyScheme: undefined,
+                                        		headers: Header,
+                                        		ignoreSSLErrors: true,
+                                        		url: currentUrl,
+                                        		content: undefined,
+                                        		timeout: 300
+                                        	};
+                                        
+                                        	let row = {};
+                                        
+                                        	try {
+                                        		let htmlContent = Resources["ContentLoaderFunctions"].PostText(params);
+                                        
+                                        		// Extract ModifiedBy
+                                        		let modifiedByMatch = htmlContent.match(/"authorization":\s*\{\s*"gui":\s*\{\s*"html":\s*"([^"]*?\s*?\d{2}:\d{2}\s*?CEST)"/);
+                                        		row.ModifiedBy = modifiedByMatch ? modifiedByMatch[1].replace(/&nbsp;/g, '').trim() : "";
+                                        
+                                        		// Extract LastModified
+                                        		let lastModifiedMatch = htmlContent.match(/"thePersistInfo_modifyStamp":\s*\{[^}]*"gui":\s*\{[^}]*"tooltip":\s*"([^"]+)"/);
+                                        		row.LastModified = lastModifiedMatch ? lastModifiedMatch[1].trim() : "";
+                                        
+                                        		// Extract State
+                                        		let stateMatch = htmlContent.match(/"state":"(\w+)"/);
+                                        		row.State = stateMatch ? stateMatch[1].trim() : "";
+                                        
+                                        		// Set EquipmentType
+                                        		if (i >= urls.length - 3) {
+                                        			row.EquipmentType = "Cooktop";
+                                        		} else {
+                                        			row.EquipmentType = "AirConditioner";
+                                        		}
+                                        
+                                        		row.Name = names[i] || "Unknown";
+                                        
+                                        		resultTable.AddRow(row);
+                                        	} catch (err) {
+                                        		logger.warn("Failed to process URL: " + currentUrl + " | Error: " + err.message);
+                                        	}
+                                        }
+                                        
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocumentStateCount">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let incubationCountInfotable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.IncubationCount.DS"
+                                        });
+                                        
+                                        let lockedCount = Resources["InfoTableFunctions"].Query({
+                                        	t: Infotable,
+                                        	query: {
+                                        		filters: {
+                                        			type: "EQ",
+                                        			fieldName: "State",
+                                        			value: "LOCKED"
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        let approvedCount = Resources["InfoTableFunctions"].Query({
+                                        	t: Infotable,
+                                        	query: {
+                                        		filters: {
+                                        			type: "EQ",
+                                        			fieldName: "State",
+                                        			value: "APPROVED"
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        let rejectedCount = Resources["InfoTableFunctions"].Query({
+                                        	t: Infotable,
+                                        	query: {
+                                        		filters: {
+                                        			type: "EQ",
+                                        			fieldName: "State",
+                                        			value: "REJECTED"
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        incubationCountInfotable.AddRow({
+                                            Approved: approvedCount.getRowCount(), // NUMBER
+                                            Rejected: rejectedCount.getRowCount(), // NUMBER
+                                            Locked: lockedCount.getRowCount() // NUMBER
+                                        });
+                                        
+                                        
+                                        result = incubationCountInfotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDocumentTimelineHistory">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let Headers = {
+                                        	"Authorization": "Basic bGl2YWRtaW46bGl2YWRtaW4=",
+                                            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                                        };
+                                        
+                                        //let Content = "";
+                                        let params = {
+                                        	headers: Headers /* JSON */ ,
+                                        	ignoreSSLErrors: true /* BOOLEAN */ ,
+                                        	url: "https://windchill.arorian.com/Windchill/ptc1/comp/history.versionhistory?ContainerOid=OR%3Awt.inf.library.WTLibrary%3A1800073&oid=VR%3Awt.doc.WTDocument%3A3042856&u8=1&AjaxEnabled=thirdLevelNav",
+                                        
+                                        };
+                                        
+                                        // result: JSON
+                                        result = Resources["ContentLoaderFunctions"].PostText(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getIncubationDocuments">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /**
+                                         * Service Name: getIncubationDocuments
+                                         * Description : Retrieves Windchill Incubation documents under a specific folder path.
+                                         * Filters     : DocTypeName = 'Incubation' and FolderLocation includes '/Centralise DataBase/Incubation/'
+                                         * Developer   : Raj Kumar
+                                         * Date        : 22-Apr-2025
+                                         */
+                                        
+                                        try {
+                                        	let data;
+                                        
+                                        	// Fetch Incubation documents using WRS OData filter
+                                        	let incubationDocuments = Things["Livpure Services"].GetDocuments({
+                                        		$filter: "DocTypeName eq 'Incubation'"
+                                        	});
+                                        
+                                        	// Filter only those in specific folder location
+                                        	data = incubationDocuments.value.filter(doc =>
+                                        		doc.FolderLocation &&
+                                        		doc.FolderLocation.includes("/Centralise DataBase/Incubation/")
+                                        	);
+                                        
+                                        	// Return filtered documents
+                                            me.responseData = data;
+                                        	result = data;
+                                        
+                                        } catch (err) {
+                                        	logger.error(me.name + " Error in getIncubationDocuments: " + err.message + "at lineNumber: " + err.lineNumber);
+                                        	result = {
+                                        		status: "error",
+                                        		message: "Failed to retrieve Incubation documents. Check logs for more info.",
+                                        		details: err.message
+                                        	};
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProductCategories">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /**
+                                         * Service Name : getUniqueProductCategories
+                                         * Description  : Extracts unique ProductCategory values from Incubation documents and returns them in an InfoTable.
+                                         * Output       : result (INFOTABLE - DataShape: ARN.NameValue.DS with fields "Name" (Display) and "Value")
+                                         * Developer    : Raj Kumar
+                                         * Date         : 22-Apr-2025
+                                         */
+                                        
+                                        try {
+                                            // Step 1: Create the output InfoTable
+                                            let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "ARN.NameValue.DS"
+                                            });
+                                        
+                                            // Step 2: Fetch all incubation documents
+                                            let documents = me.responseData;
+                                        
+                                            // Step 3: Track unique product categories
+                                            let uniqueCategories = {};
+                                            let docArray = documents.array;
+                                        
+                                            for (let i = 0; i < docArray.length; i++) {
+                                                let doc = docArray[i];
+                                        
+                                                if (doc.Productcategory && doc.Productcategory.Display && doc.Productcategory.Value) {
+                                                    let displayVal = doc.Productcategory.Display;
+                                                    let valueVal = doc.Productcategory.Value;
+                                        
+                                                    if (!uniqueCategories[displayVal]) {
+                                                        uniqueCategories[displayVal] = true;
+                                        
+                                                        resultTable.AddRow({
+                                                            Name: displayVal,
+                                                            Value: valueVal
+                                                        });
+                                                    }
+                                                }
+                                            }
+                                        
+                                            // Step 4: Return result
+                                            result = resultTable;
+                                        
+                                        } catch (err) {
+                                            logger.error(me.name+" Has Error in getProductCategories: " + err.message+"At LineNumber: "+err.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProductsByProjectType">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = me.processResponseData_Infotable(); // Get initial data (INFOTABLE)
+                                        
+                                        let products = Resources["InfoTableFunctions"].Query({
+                                        	t: data,
+                                        	query: {
+                                        		filters: {
+                                        			type: "EQ",
+                                        			fieldName: "ComArorianWindchillLivpureProjctType",
+                                        			value: projectType
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        // Create result table with Name/Value format
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.NameValue.DS"
+                                        });
+                                        
+                                        // Process each filtered row
+                                        let productCategories = me.getProductCategories();
+                                        
+                                        products.rows.toArray().forEach(row => {
+                                        	let match = Resources["InfoTableFunctions"].Query({
+                                        		t: productCategories,
+                                        		query: {
+                                        			filters: {
+                                        				type: "EQ",
+                                        				fieldName: "Value",
+                                        				value: row.Productcategory
+                                        			}
+                                        		}
+                                        	});
+                                        
+                                        	// Add matching row(s) to the resultTable
+                                        	match.rows.toArray().forEach(matchedRow => {
+                                        		resultTable.AddRow({
+                                        			Name: matchedRow.Name,
+                                        			Value: matchedRow.Value // Adjust field name if it differs
+                                        		});
+                                        	});
+                                        
+                                        });
+                                        // Final result
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjectType">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /**
+                                         * Service Name : getUniqueProjectTypesFromArray
+                                         * Description  : Extracts unique Project Type display values from a document array.
+                                         * Output       : result (INFOTABLE - DataShape: ARN.NameValue.DS with fields "Name" and "Value")
+                                         * Developer    : Raj Kumar
+                                         * Date         : 22-Apr-2025
+                                         */
+                                        
+                                        try {
+                                            // Step 1: Create the InfoTable to store unique project types
+                                            let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "ARN.NameValue.DS"
+                                            });
+                                        
+                                            // Step 2: Fetch the incubation documents (expects InfoTable with a field 'array')
+                                            let documents = me.responseData;
+                                        
+                                            // Step 3: Validate and extract array
+                                            let docArray = documents.array || [];
+                                            let uniqueTypes = {};
+                                        
+                                            // Step 4: Loop through each document and collect unique Project Types
+                                            for (let i = 0; i < docArray.length; i++) {
+                                                let doc = docArray[i];
+                                        
+                                                if (doc.ComArorianWindchillLivpureProjctType && doc.ComArorianWindchillLivpureProjctType.Display) {
+                                                    let displayVal = doc.ComArorianWindchillLivpureProjctType.Display;
+                                                    let valueVal = doc.ComArorianWindchillLivpureProjctType.Value;
+                                        
+                                                    if (!uniqueTypes[displayVal]) {
+                                                        uniqueTypes[displayVal] = true;
+                                        
+                                                        resultTable.AddRow({
+                                                            Name: displayVal,
+                                                            Value: valueVal
+                                                        });
+                                                    }
+                                                }
+                                            }
+                                        
+                                            // Step 5: Return result
+                                            result = resultTable;
+                                        
+                                        } catch (err) {
+                                            logger.error(me.name +" Has Error in getProjectType: " + err.message+"At LineNumber: "+err.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="processResponseData_Infotable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /**
+                                         * Service Name : convertResponseToInfoTable
+                                         * Description  : Converts me.responseData (JSON array) into an InfoTable of DataShape ARN.Incubation.DS
+                                         * Output       : result (INFOTABLE - DataShape: ARN.Incubation.DS)
+                                         * Developer    : Raj Kumar
+                                         * Date         : 23-Apr-2025
+                                         */
+                                        
+                                        try {
+                                        	let responseData = me.responseData;
+                                        
+                                        	// Step 1: Create InfoTable from DataShape
+                                        	let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "ARN.Incubation.DS"
+                                        	});
+                                        
+                                        	// Step 2: Populate InfoTable from response data
+                                        	for (let i = 0; i < responseData.array.length; i++) {
+                                        		let doc = responseData.array[i];
+                                        
+                                        		resultTable.AddRow({
+                                        			OrganizationName: doc.OrganizationName || "", // STRING
+                                        			VersionID: doc.VersionID || "", // STRING
+                                        			Description: doc.Description || "", // STRING
+                                        			ModifiedBy: doc.ModifiedBy || "", // STRING
+                                        			CheckoutState: doc.CheckoutState || "", // STRING
+                                        			ComArorianWindchillLivpureProjctType: (doc.ComArorianWindchillLivpureProjctType && doc.ComArorianWindchillLivpureProjctType.Value) || "", // STRING
+                                        			Name: doc.Name || "", // STRING
+                                        			LastModified: doc.LastModified || null, // DATETIME
+                                        			Number: doc.Number || "", // STRING
+                                        			Version: doc.Version || "", // STRING
+                                        			ID: doc.ID || "", // STRING
+                                        			WorkInProgressState: (doc.WorkInProgressState && doc.WorkInProgressState.Value) || "", // STRING
+                                        			State: (doc.State && doc.State.Value) || "", // STRING
+                                        			Productcategory: (doc.Productcategory && doc.Productcategory.Value) || "", // STRING
+                                        			FolderLocation: doc.FolderLocation || "", // STRING
+                                        			ExtLivPureExpectedResolutionDate: doc.ExtLivPureExpectedResolutionDate || null // DATETIME
+                                        		});
+                                        	}
+                                        
+                                        	// Step 3: Assign final result
+                                        	result = resultTable;
+                                        
+                                        } catch (err) {
+                                        	logger.error("Error in convertResponseToInfoTable service: " + err.message);
+                                        	result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "EmptyInfoTable",
+                                        		dataShapeName: "ARN.Incubation.DS"
+                                        	});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="responseData"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <responseData>
+                    <Value>
+                        <json>
+                        <![CDATA[
+                        {"array":[{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3042856","Description":"ASDFGVBN","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"ASDFGHJKJ","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Cooktop","ComArorianWindchillLivpureProjctType":{"Value":"NPDA","Display":"NPD-A"},"Name":"INC-CT-CFT-0000015966","LastModified":"2025-03-04T05:51:24+01:00","ObjectType":"Incubation","Number":"INC-CT-CFT-0000015966","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-03-04T05:51:24+01:00","ID":"OR:wt.doc.WTDocument:3042857","Identity":"Incubation - INC-CT-CFT-0000015966, INC-CT-CFT-0000015966, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"LOCKED","Display":"Locked"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"Cooktop","Display":"Cooktop"},"FolderLocation":"/Centralise DataBase/Incubation/Cooktop","ExtLivPureExpectedResolutionDate":"2025-03-17T00:00:00+01:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3303062","Description":"AC Leakage resolution","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"Engineering and Product team will introduce improvements","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Air Conditioner","ComArorianWindchillLivpureProjctType":{"Value":"NPI","Display":"NPI-A"},"Name":"INC-AC-CFT-0000016894","AddRefDocumentUSerNeedsAndTrends":"UNT-AC-MKT-0000016887","LastModified":"2025-03-18T07:02:41+01:00","ObjectType":"Incubation","Number":"INC-AC-CFT-0000016894","AddRefDocument":"PRD-0000016883","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-03-18T07:02:41+01:00","ID":"OR:wt.doc.WTDocument:3303063","Identity":"Incubation - INC-AC-CFT-0000016894, INC-AC-CFT-0000016894, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"APPROVED","Display":"Approved"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"AirConditioner","Display":"Air Conditioner"},"FolderLocation":"/Centralise DataBase/Incubation/Air Conditioner","ExtLivPureExpectedResolutionDate":"2025-03-19T00:00:00+01:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3353786","Description":"AC Leakage resolution","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"Engineering and Product team will introduce improvements","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Air Conditioner","ComArorianWindchillLivpureProjctType":{"Value":"NPI","Display":"NPI-A"},"Name":"INC-AC-CFT-0000017362","AddRefDocumentUSerNeedsAndTrends":"UNT-AC-MKT-0000017355","LastModified":"2025-03-26T07:13:08+01:00","ObjectType":"Incubation","Number":"INC-AC-CFT-0000017362","AddRefDocument":"PS-AC-MKT-0000017348","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-03-26T07:13:08+01:00","ID":"OR:wt.doc.WTDocument:3353787","Identity":"Incubation - INC-AC-CFT-0000017362, INC-AC-CFT-0000017362, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"LOCKED","Display":"Locked"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"AirConditioner","Display":"Air Conditioner"},"FolderLocation":"/Centralise DataBase/Incubation/Air Conditioner","ExtLivPureExpectedResolutionDate":"2025-03-31T00:00:00+02:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3010406","Description":"qwsdfgh","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"dfghj","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Cooktop","ComArorianWindchillLivpureProjctType":{"Value":"NPDA","Display":"NPD-A"},"Name":"INC-CT-CFT-0000014979","LastModified":"2025-02-28T09:31:03+01:00","ObjectType":"Incubation","Number":"INC-CT-CFT-0000014979","AddRefDocument":"PRD-0000012804","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-02-28T09:31:03+01:00","ID":"OR:wt.doc.WTDocument:3010407","Identity":"Incubation - INC-CT-CFT-0000014979, INC-CT-CFT-0000014979, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"LOCKED","Display":"Locked"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"Cooktop","Display":"Cooktop"},"FolderLocation":"/Centralise DataBase/Incubation/Cooktop","ExtLivPureExpectedResolutionDate":"2025-02-28T00:00:00+01:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3022653","Description":"Air Conditioner Leakage resolution","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"Engineering and Product team will introduce improvements","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Air Conditioner","ComArorianWindchillLivpureProjctType":{"Value":"NPI","Display":"NPI-A"},"Name":"INC-AC-CFT-0000015107","AddRefDocumentUSerNeedsAndTrends":"UNT-AC-MKT-0000015041","LastModified":"2025-03-03T06:49:47+01:00","ObjectType":"Incubation","Number":"INC-AC-CFT-0000015107","AddRefDocument":"PRD-0000015037","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-03-03T06:49:47+01:00","ID":"OR:wt.doc.WTDocument:3022654","Identity":"Incubation - INC-AC-CFT-0000015107, INC-AC-CFT-0000015107, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"APPROVED","Display":"Approved"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"AirConditioner","Display":"Air Conditioner"},"FolderLocation":"/Centralise DataBase/Incubation/Air Conditioner","ExtLivPureExpectedResolutionDate":"2025-03-05T00:00:00+01:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3010440","Description":"sdfgh","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"AZXCVB","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Cooktop","Name":"INC-CT-CFT-0000014986","LastModified":"2025-02-28T09:34:40+01:00","ObjectType":"Incubation","Number":"INC-CT-CFT-0000014986","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-02-28T09:34:40+01:00","ID":"OR:wt.doc.WTDocument:3010441","Identity":"Incubation - INC-CT-CFT-0000014986, INC-CT-CFT-0000014986, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"LOCKED","Display":"Locked"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"Cooktop","Display":"Cooktop"},"FolderLocation":"/Centralise DataBase/Incubation/Cooktop","ExtLivPureExpectedResolutionDate":"2025-02-28T00:00:00+01:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3502762","Description":"INC-AC-CFT-001","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"Nothing","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Air Conditioner","Name":"INC-AC-CFT-0000018307","LastModified":"2025-04-15T09:07:35+02:00","ObjectType":"Incubation","Number":"INC-AC-CFT-0000018307","AddRefDocument":"PRD-0000017057","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-04-15T09:07:35+02:00","ID":"OR:wt.doc.WTDocument:3502763","Identity":"Incubation - INC-AC-CFT-0000018307, INC-AC-CFT-0000018307, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"APPROVED","Display":"Approved"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"AirConditioner","Display":"Air Conditioner"},"FolderLocation":"/Centralise DataBase/Incubation/Air Conditioner","ExtLivPureExpectedResolutionDate":"2025-04-16T00:00:00+02:00"},{"OrganizationName":"Livpure","VersionID":"VR:wt.doc.WTDocument:3468061","ExtLivpureConceptLogComments":"Rejected","Description":"asdfgh","@odata.type":"#PTC.DocMgmt.Ticket","DocTypeName":"Incubation","ComArorianWindchillLivpureCreatorRemarkIncubation":"qwerfgt","CheckoutState":"Checked in","ModifiedBy":"livadmin","FolderName":"Air Conditioner","ComArorianWindchillLivpureProjctType":{"Value":"NPI","Display":"NPI-A"},"Name":"INC-AC-CFT-0000017946","LastModified":"2025-04-12T15:01:01+02:00","ObjectType":"Incubation","Number":"INC-AC-CFT-0000017946","AddRefDocument":"PRD-0000017258","CheckOutStatus":"","Version":"A.1","Latest":true,"CreatedOn":"2025-04-11T14:56:04+02:00","ID":"OR:wt.doc.WTDocument:3468062","Identity":"Incubation - INC-AC-CFT-0000017946, INC-AC-CFT-0000017946, Livpure, A.1","CreatedBy":"livadmin","WorkInProgressState":{"Value":"c/i","Display":"Checked in"},"CabinetName":"Default","Revision":"A","LifeCycleTemplateName":"Livpure Incubation","State":{"Value":"REJECTED","Display":"Rejected"},"TypeIcon":{"Path":"https://windchill.arorian.com/Windchill/sslClientAuth/netmarkets/images/doc_document.gif","Tooltip":"Incubation"},"Productcategory":{"Value":"AirConditioner","Display":"Air Conditioner"},"FolderLocation":"/Centralise DataBase/Incubation/Air Conditioner","ExtLivPureExpectedResolutionDate":"2025-04-24T00:00:00+02:00"}]}
+                        ]]>
+                        </json>
+                    </Value>
+                    <Timestamp>2025-04-23T14:51:21.732Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </responseData>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

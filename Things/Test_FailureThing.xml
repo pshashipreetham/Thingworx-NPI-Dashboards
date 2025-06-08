@@ -1,0 +1,2174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="4"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="Test_FailureThing"
+         projectName="Arorian"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailureCountbyProduct">
+                        <ResultType
+                         aspect.dataShape="FailureByProductDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailureModeDistribution">
+                        <ResultType
+                         aspect.dataShape="FailureModeDistributionDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailuresbyCity">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailuresbyEnvironmentalConditions">
+                        <ResultType
+                         aspect.dataShape="FailureEnvironmentDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailuresbyProductCategory">
+                        <ResultType
+                         aspect.dataShape="ProductCategoryFailureDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="FailureTrendsOverTime">
+                        <ResultType
+                         aspect.dataShape="FailureTrendsDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCityGraphData">
+                        <ResultType
+                         aspect.dataShape="ARN.Graph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetFilteredFailureData">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="AggregationField"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="AggregationType"
+                             ordinal="4"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getGraphData">
+                        <ResultType
+                         aspect.dataShape="ARN.Graph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getIssueGraphData">
+                        <ResultType
+                         aspect.dataShape="ARN.Graph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPartsFailureData">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSelectedData">
+                        <ResultType
+                         aspect.dataShape="ARN.PartsFailure.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="ARN.PartsFailure.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="InputInfoTable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getStateGraphData">
+                        <ResultType
+                         aspect.dataShape="ARN.Graph.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTotalFailure">
+                        <ResultType
+                         baseType="NUMBER"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="processResponse">
+                        <ResultType
+                         aspect.dataShape="ARN.PartsFailure.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="staticResponse">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="testCopy">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Category"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="TopFailingParts">
+                        <ResultType
+                         aspect.dataShape="PartFailureDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="WarrantyvsNon-WarrantyFailures">
+                        <ResultType
+                         aspect.dataShape="WarrantyFailureDistributionDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailureCountbyProduct">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable structure
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "FailureByProductDataShape" // Ensure this Data Shape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data (Replace with actual API or Thing property)
+                                        var apiResponse = me.getPartsFailureData(); // Example API call
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                            //return result; // Return empty InfoTable
+                                        }
+                                        
+                                        // Initialize failure counter per product
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through data and count failures per product
+                                        apiResponse.value.forEach(function(item) {
+                                            var product = item.ComLivpureProductName || "Unknown"; // Handle missing product names
+                                            var quantity = item.ComLivpureQuantity ? parseInt(item.ComLivpureQuantity, 10) : 1; // Ensure integer value
+                                        
+                                            if (isNaN(quantity)) {
+                                                logger.warn("Invalid quantity detected for product: " + product);
+                                                quantity = 1; // Default fallback
+                                            }
+                                        
+                                            if (failureCounts[product]) {
+                                                failureCounts[product] += quantity;
+                                            } else {
+                                                failureCounts[product] = quantity;
+                                            }
+                                        });
+                                        
+                                        // Populate the InfoTable
+                                        Object.keys(failureCounts).forEach(function(product) {
+                                            var newRow = {
+                                                ProductName: product,
+                                                FailureCount: parseInt(failureCounts[product], 10) // Ensure integer conversion
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Failure Count by Product InfoTable populated successfully.");
+                                        
+                                        Output = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailureModeDistribution">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable structure
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "FailureModeDistributionDataShape" // Ensure this Data Shape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure mode data
+                                        var apiResponse = me.getPartsFailureData(); // Example API call
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                          //  return result; // Return empty InfoTable
+                                        }
+                                        
+                                        // Initialize failure mode counters
+                                        var failureModeCounts = {};
+                                        
+                                        // Iterate through data and count occurrences per failure mode
+                                        apiResponse.value.forEach(function(item) {
+                                            var mode = item.ComLivpureFailureMode;
+                                        
+                                            // If mode is an object, extract "Display" or "Value"
+                                            if (typeof mode === "object" && mode !== null) {
+                                                mode = mode.Display || mode.Value || "Unknown"; // Prioritize "Display", fallback to "Value"
+                                            }
+                                            
+                                            // Handle missing failure modes
+                                            mode = mode || "Unknown";
+                                        
+                                            if (failureModeCounts[mode]) {
+                                                failureModeCounts[mode]++;
+                                            } else {
+                                                failureModeCounts[mode] = 1;
+                                            }
+                                        });
+                                        
+                                        // Populate the InfoTable
+                                        Object.keys(failureModeCounts).forEach(function(mode) {
+                                            var newRow = {
+                                                FailureMode: mode,
+                                                FailureCount: parseInt(failureModeCounts[mode], 10) // Ensure integer conversion
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Failure Mode Distribution InfoTable populated successfully.");
+                                        
+                                        output = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailuresbyCity">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable result
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "CityFailureDataShape" // Define a proper Data Shape
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data from existing service
+                                        var apiResponse = me.getPartsFailureData(); 
+                                        
+                                        // Ensure response is valid
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                         //   return; // No valid data, return an empty InfoTable
+                                        }
+                                        
+                                        // Initialize city failure counter
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through data to count failures per city
+                                        apiResponse.value.forEach(function(item) {
+                                            var city = item.ComLivpureCity || "Unknown"; // Handle missing city names
+                                            
+                                            if (failureCounts[city]) {
+                                                failureCounts[city]++;
+                                            } else {
+                                                failureCounts[city] = 1;
+                                            }
+                                        });
+                                        
+                                        // Populate InfoTable
+                                        Object.keys(failureCounts).forEach(function(city) {
+                                            var newRow = {
+                                                City: city,
+                                                FailureCount: failureCounts[city]
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log for verification
+                                        logger.warn("Failures by City InfoTable populated successfully.");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailuresbyEnvironmentalConditions">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Create an InfoTable from the defined Data Shape
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "FailureEnvironmentDataShape" // Ensure this Data Shape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data (replace with actual API or data source)
+                                        var apiResponse = me.getPartsFailureData(); // Example: Fetch data from a Thing property/service
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                          //  return result; // Return empty InfoTable if data is invalid
+                                        }
+                                        
+                                        // Initialize failure counter per environmental condition
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through data and count failures by environmental condition
+                                        apiResponse.value.forEach(function(item) {
+                                            var condition = item.ComLivpureFailureEnvironment || "Unknown"; // Handle missing values
+                                            
+                                            if (failureCounts[condition]) {
+                                                failureCounts[condition]++;
+                                            } else {
+                                                failureCounts[condition] = 1;
+                                            }
+                                        });
+                                        
+                                        // Populate the InfoTable
+                                        Object.keys(failureCounts).forEach(function(condition) {
+                                            var newRow = {
+                                                EnvironmentCondition: condition,
+                                                FailureCount: failureCounts[condition]
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Failures by Environmental Conditions InfoTable populated successfully.");
+                                        
+                                        Ouput = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailuresbyProductCategory">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable result
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ProductCategoryFailureDataShape" // Ensure this Data Shape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data
+                                        var apiResponse = me.getPartsFailureData();
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                           // return; // No valid data, return an empty InfoTable
+                                        }
+                                        
+                                        // Initialize failure counter per product category
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through data to count failures per product category
+                                        apiResponse.value.forEach(function(item) {
+                                            var category = item.Productcategory;
+                                        
+                                            // Extract the display name from the object
+                                            if (typeof category === "object" && category !== null) {
+                                                category = category.Display || category.Value || JSON.stringify(category);
+                                            }
+                                            
+                                            // Ensure category is a valid string, else mark as "Unknown"
+                                            category = (typeof category === "string" && category.trim() !== "") ? category : "Unknown";
+                                        
+                                            if (failureCounts[category]) {
+                                                failureCounts[category]++;
+                                            } else {
+                                                failureCounts[category] = 1;
+                                            }
+                                        });
+                                        
+                                        // Populate InfoTable with failure counts
+                                        Object.keys(failureCounts).forEach(function(category) {
+                                            var newRow = {
+                                                ProductCategory: category,
+                                                FailureCount: failureCounts[category]
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Failures by Product Category InfoTable populated successfully.");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="FailureTrendsOverTime">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define an InfoTable structure
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "FailureTrendsDataShape" // Ensure this Data Shape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data (replace with actual API or Thing property)
+                                        var apiResponse = me.getPartsFailureData(); // Example API call
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                           // return result; // Return empty InfoTable if data is invalid
+                                        }
+                                        
+                                        // Choose time aggregation type: "monthly" or "yearly"
+                                        var timeAggregation = "monthly"; // Change to "yearly" if required
+                                        
+                                        // Initialize failure counter per time period
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through data and count failures by time period
+                                        apiResponse.value.forEach(function(item) {
+                                            if (item.ExtLivPureFailureDate) {
+                                                var dateObj = new Date(item.ExtLivPureFailureDate); // Convert to Date object
+                                        
+                                                // Determine the time period based on aggregation
+                                                var timePeriod = timeAggregation === "monthly" 
+                                                    ? dateObj.getFullYear() + "-" + ("0" + (dateObj.getMonth() + 1)).slice(-2) // YYYY-MM
+                                                    : dateObj.getFullYear().toString(); // YYYY
+                                        
+                                                // Count failures per time period
+                                                if (failureCounts[timePeriod]) {
+                                                    failureCounts[timePeriod]++;
+                                                } else {
+                                                    failureCounts[timePeriod] = 1;
+                                                }
+                                            }
+                                        });
+                                        
+                                        // Populate the InfoTable
+                                        Object.keys(failureCounts).forEach(function(timePeriod) {
+                                            var newRow = {
+                                                TimePeriod: timePeriod,
+                                                FailureCount: failureCounts[timePeriod]
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Failure Trends Over Time InfoTable populated successfully.");
+                                        
+                                        Output = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCityGraphData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = me.processResponse();
+                                        
+                                        /* ------------------- Unique ID ------------------------- */
+                                        let uniqueIDs = Resources["InfoTableFunctions"].Distinct({
+                                        	t: data /* INFOTABLE */ ,
+                                        	columns: "City" /* STRING */
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ARN.Graph.DS)
+                                        let pieGraph = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.Graph.DS"
+                                        });
+                                        
+                                        uniqueIDs.rows.toArray().forEach(row => {
+                                        	if (row.City !== "" && row.City !== null && row.City !== undefined) {
+                                        	let dataRows = Resources["InfoTableFunctions"].Query({
+                                        		t: data /* INFOTABLE */ ,
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "City",
+                                        				"value": row.City
+                                        			}
+                                        		} /* QUERY */
+                                        	});
+                                            
+                                        	pieGraph.AddRow({
+                                        		Name: row.City, // STRING
+                                        		Count: dataRows.getRowCount() // NUMBER
+                                        	});
+                                            }
+                                        });
+                                        
+                                        result = pieGraph;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetFilteredFailureData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the input filter dynamically
+                                        let filter = "DocTypeName eq 'Part Failure Data'";
+                                        
+                                        // Apply additional filtering if provided
+                                        if (FilterType && FilterValue) {
+                                            filter += ` and ${FilterType} eq '${FilterValue}'`;
+                                        }
+                                        
+                                        // Fetch the data from Windchill
+                                        let response = Things["Livpure Services"].GetDocuments({
+                                            $filter: filter
+                                        });
+                                        
+                                        // Create an InfoTable DataShape dynamically
+                                        let params = {
+                                            infoTableName: "FailureData",
+                                            dataShapeName: "FailureDataShape" // Define this DataShape in ThingWorx
+                                        };
+                                        
+                                        // Create an empty InfoTable
+                                        let resultTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Parse response data
+                                        if (response && response.value) {
+                                            let data = response.value;
+                                        
+                                            // Optional: Grouping logic
+                                            let groupedData = {};
+                                            
+                                            data.forEach(item => {
+                                                let groupKey = GroupByField ? item[GroupByField] : "All Data";
+                                        
+                                                if (!groupedData[groupKey]) {
+                                                    groupedData[groupKey] = {
+                                                        GroupKey: groupKey,
+                                                        Count: 0,
+                                                        Sum: 0
+                                                    };
+                                                }
+                                        
+                                                // Aggregation logic
+                                                if (AggregationType === "COUNT") {
+                                                    groupedData[groupKey].Count += 1;
+                                                } else if (AggregationType === "SUM" && AggregationField) {
+                                                    groupedData[groupKey].Sum += parseInt(item[AggregationField]) || 0;
+                                                }
+                                            });
+                                        
+                                            // Populate InfoTable
+                                            for (let key in groupedData) {
+                                                let row = {
+                                                    GroupKey: key,
+                                                    Count: groupedData[key].Count,
+                                                    Sum: groupedData[key].Sum
+                                                };
+                                                resultTable.AddRow(row);
+                                            }
+                                        }
+                                        
+                                        // Return the InfoTable result
+                                        result = resultTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getGraphData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = Things["ARN.PartsFailure.DT"].QueryDataTableEntries({
+                                        	values: undefined /* INFOTABLE */,
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */,
+                                        	tags: undefined /* TAGS */,
+                                        	source: undefined /* STRING */,
+                                        	query: undefined /* QUERY */
+                                        });
+                                        
+                                        ///* ------------------- Unique ID ------------------------- */
+                                        let uniqueIDs = Resources["InfoTableFunctions"].Distinct({
+                                        	t: data /* INFOTABLE */ ,
+                                        	columns: "FailureID" /* STRING */
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ARN.Graph.DS)
+                                        let pieGraph = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.Graph.DS"
+                                        });
+                                        
+                                        uniqueIDs.rows.toArray().forEach(row => {
+                                            // Ensure FailureID is valid before proceeding
+                                            if (row.FailureID !== "" && row.FailureID !== null && row.FailureID !== undefined) {
+                                                let dataRows = Resources["InfoTableFunctions"].Query({
+                                                    t: data, // INFOTABLE
+                                                    query: {
+                                                        filters: {
+                                                            type: "EQ",
+                                                            fieldName: "FailureID",
+                                                            value: row.FailureID
+                                                        }
+                                                    }
+                                                });
+                                        
+                                                pieGraph.AddRow({
+                                                    Name: row.FailureID, // STRING
+                                                    Count: dataRows.getRowCount() // NUMBER
+                                                });
+                                            }
+                                        });
+                                        
+                                        result = pieGraph;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getIssueGraphData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = me.processResponse();
+                                        
+                                        /* ------------------- Unique ID ------------------------- */
+                                        let uniqueIDs = Resources["InfoTableFunctions"].Distinct({
+                                        	t: data /* INFOTABLE */ ,
+                                        	columns: "Symptom" /* STRING */
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ARN.Graph.DS)
+                                        let pieGraph = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.Graph.DS"
+                                        });
+                                        
+                                        uniqueIDs.rows.toArray().forEach(row => {
+                                        	
+                                        	let dataRows = Resources["InfoTableFunctions"].Query({
+                                        		t: data /* INFOTABLE */ ,
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "Symptom",
+                                        				"value": row.Symptom
+                                        			}
+                                        		} /* QUERY */
+                                        	});
+                                            
+                                        	pieGraph.AddRow({
+                                        		Name: row.Symptom, // STRING
+                                        		Count: dataRows.getRowCount() // NUMBER
+                                        	});
+                                            
+                                        });
+                                        
+                                        result = pieGraph;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPartsFailureData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let filter = "DocTypeName eq 'Part Failure Data'";
+                                        let response = Things["Livpure Services"].GetDocuments({
+                                        	$filter: filter
+                                        });
+                                        
+                                        result =  response;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSelectedData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /* -------------------- JSON Response --------------------- */
+                                        let data = me.processResponse();
+                                        
+                                        /* -------------------- Processing JSON to InfoTable ------------------------- */
+                                        let partsFailureReport = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.PartsFailure.DS"
+                                        });
+                                        
+                                        let dataRows = Resources["InfoTableFunctions"].Query({
+                                        	t: data /* INFOTABLE */ ,
+                                        	query: {
+                                        		"filters": {
+                                        			"type": "EQ",
+                                        			"fieldName": "PartsFailureName",
+                                        			"value": InputInfoTable[0].PartsFailureName
+                                        		}
+                                        	}
+                                        });
+                                        
+                                        
+                                        result = dataRows;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getStateGraphData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let data = me.processResponse();
+                                        
+                                        /* ------------------- Unique ID ------------------------- */
+                                        let uniqueIDs = Resources["InfoTableFunctions"].Distinct({
+                                        	t: data /* INFOTABLE */ ,
+                                        	columns: "State" /* STRING */
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ARN.Graph.DS)
+                                        let pieGraph = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ARN.Graph.DS"
+                                        });
+                                        
+                                        uniqueIDs.rows.toArray().forEach(row => {
+                                        	
+                                        	let dataRows = Resources["InfoTableFunctions"].Query({
+                                        		t: data /* INFOTABLE */ ,
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "State",
+                                        				"value": row.State
+                                        			}
+                                        		} /* QUERY */
+                                        	});
+                                            
+                                        	pieGraph.AddRow({
+                                        		Name: row.State, // STRING
+                                        		Count: dataRows.getRowCount() // NUMBER
+                                        	});
+                                            
+                                        });
+                                        
+                                        result = pieGraph;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTotalFailure">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = me.processResponse().getRowCount();
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="processResponse">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        /* -------------------- JSON Response --------------------- */
+                                        let data = me.getPartsFailureData();
+                                        
+                                        /* -------------------- Processing JSON to InfoTable ------------------------- */
+                                        let partsFailureReport = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ARN.PartsFailure.DS"
+                                        });
+                                        
+                                        data.value.forEach(row => {
+                                        	partsFailureReport.AddRow({
+                                        		PartsFailureName: row.Name, // STRING
+                                        		FailureID: row.ComLivpureFailureID, // STRING
+                                        		FailureDate: row.ExtLivPureFailureDate, // DATETIME
+                                        		FailureMode: row.ComLivpureFailureMode, // STRING
+                                        		Symptom: row.ComLivpureSymptom, // STRING
+                                        		Description: row.ExtLivPurePartDescription, // STRING
+                                        		ProductID: row.ExtLivPureProductID, // STRING
+                                        		ProductName: row.ComLivpureProductName, // STRING
+                                                State: row.State.Value, // STRING
+                                                City: row.ComLivpureCity // STRING
+                                                
+                                        	});
+                                        });
+                                        
+                                        Things["ARN.PartsFailure.DT"].AddDataTableEntries({
+                                        	tags: undefined /* TAGS */,
+                                        	location: undefined /* LOCATION */,
+                                        	source: undefined /* STRING */,
+                                        	sourceType: undefined /* STRING */,
+                                        	values: partsFailureReport /* INFOTABLE */
+                                        });
+                                        
+                                        result = partsFailureReport;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="staticResponse">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let response = {
+                                          "@odata.context": "https://windchill.arorian.com/Windchill/servlet/odata/v6/DocMgmt/$metadata#Documents",
+                                          "value": [
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T07:23:02+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2845105",
+                                              "LastModified": "2025-02-19T07:23:02+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012315, PF-0000012315, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012315",
+                                              "Number": "PF-0000012315",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2845104",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            },
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T08:26:39+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2846356",
+                                              "LastModified": "2025-02-19T08:26:39+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012322, PF-0000012322, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012322",
+                                              "Number": "PF-0000012322",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2846355",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            },
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T08:27:10+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2846374",
+                                              "LastModified": "2025-02-19T08:27:10+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012323, PF-0000012323, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012323",
+                                              "Number": "PF-0000012323",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2846373",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            },
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T12:08:15+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2850059",
+                                              "LastModified": "2025-02-19T12:08:15+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012343, PF-0000012343, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012343",
+                                              "Number": "PF-0000012343",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2850058",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            },
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T12:10:56+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2850077",
+                                              "LastModified": "2025-02-19T12:10:56+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012344, PF-0000012344, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012344",
+                                              "Number": "PF-0000012344",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2850076",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            },
+                                            {
+                                              "@odata.type": "#PTC.DocMgmt.Partfailuredata",
+                                              "CreatedOn": "2025-02-19T14:04:21+01:00",
+                                              "ID": "OR:wt.doc.WTDocument:2850753",
+                                              "LastModified": "2025-02-19T14:04:21+01:00",
+                                              "CabinetName": "Default",
+                                              "ChangeStatus": null,
+                                              "CheckOutStatus": "",
+                                              "CheckoutState": "Checked in",
+                                              "Comments": null,
+                                              "CreatedBy": "sapuser",
+                                              "Description": null,
+                                              "DocTypeName": "Part Failure Data",
+                                              "FolderLocation": "/Centralise DataBase/Centralized Data/Part Failure Data",
+                                              "FolderName": "Part Failure Data",
+                                              "GeneralStatus": null,
+                                              "Identity": "Part Failure Data - PF-0000012350, PF-0000012350, Livpure, A.1",
+                                              "Latest": true,
+                                              "LifeCycleTemplateName": "Livpure Part Failure Data Item",
+                                              "ModifiedBy": "sapuser",
+                                              "Name": "PF-0000012350",
+                                              "Number": "PF-0000012350",
+                                              "ObjectType": "Part Failure Data",
+                                              "OrganizationName": "Livpure",
+                                              "Revision": "A",
+                                              "ShareStatus": null,
+                                              "State": {
+                                                "Value": "OPEN",
+                                                "Display": "Open"
+                                              },
+                                              "Title": null,
+                                              "TypeIcon": {
+                                                "Path": "https://windchill.arorian.com/Windchill/netmarkets/images/doc_document.gif",
+                                                "Tooltip": "Part Failure Data"
+                                              },
+                                              "Version": "A.1",
+                                              "VersionID": "VR:wt.doc.WTDocument:2850752",
+                                              "WorkInProgressState": {
+                                                "Value": "c/i",
+                                                "Display": "Checked in"
+                                              },
+                                              "ComArorianWindchillLivpureCreatorRemark": null,
+                                              "ComArorianWindchillLivpureProjectID": null,
+                                              "ComArorianWindchillLivpureProjectName": null,
+                                              "ComLivpureCity": "Dadri",
+                                              "ComLivpureFailureDescription": null,
+                                              "ComLivpureFailureEnvironment": null,
+                                              "ComLivpureFailureID": "JS-24020308005195",
+                                              "ComLivpureFailureMode": null,
+                                              "ComLivpureProductName": "PEP",
+                                              "ComLivpureQuantity": "1",
+                                              "ComLivpureRemark": null,
+                                              "ComLivpureSymptom": "Taking long time to fill tank",
+                                              "ComLivpureWarranty": {
+                                                "Value": "Warranty",
+                                                "Display": "Warranty"
+                                              },
+                                              "ExtLivPureFailureDate": "2018-12-21T18:21:05+01:00",
+                                              "ExtLivPurePartDescription": "SFG RO MEMBRANE WITH HOUSING",
+                                              "ExtLivPurePartID": "16000604",
+                                              "ExtLivPureProductID": "LIV-PEP",
+                                              "Productcategory": null
+                                            }
+                                          ],
+                                          "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Paris",
+                                          "@odata.nextLink": "https://windchill.arorian.com/Windchill/servlet/odata/v6/DocMgmt/Documents?$count=false&$skiptoken=25"
+                                        };
+                                        
+                                        result = response;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable structure
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WarrantyFailureDistributionDataShape" // Ensure DataShape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data
+                                        var apiResponse = me.getPartsFailureData(); // API call to get failure data
+                                        
+                                        // Validate API response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                           // return result; // Return empty InfoTable
+                                        }
+                                        
+                                        // Initialize warranty counters
+                                        var warrantyCount = 0;
+                                        var nonWarrantyCount = 0;
+                                        
+                                        // Process data and categorize failures
+                                        apiResponse.value.forEach(function(item) {
+                                            var warrantyStatus = item.ComLivpureWarranty; // Extract warranty field
+                                        
+                                            // Ensure proper value (convert to lowercase for consistency)
+                                            if (warrantyStatus) {
+                                                var normalizedStatus = warrantyStatus.toString().trim().toLowerCase();
+                                        
+                                                if (normalizedStatus === "warranty") {
+                                                    warrantyCount++;
+                                                } else {
+                                                    nonWarrantyCount++;
+                                                }
+                                            } else {
+                                                nonWarrantyCount++; // Treat missing values as Non-Warranty
+                                            }
+                                        });
+                                        
+                                        // Add Warranty row
+                                        result.AddRow({
+                                            FailureCategory: "Warranty",
+                                            FailureCount: parseInt(warrantyCount, 10)
+                                        });
+                                        
+                                        // Add Non-Warranty row
+                                        result.AddRow({
+                                            FailureCategory: "Non-Warranty",
+                                            FailureCount: parseInt(nonWarrantyCount, 10)
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Warranty vs. Non-Warranty failure data processed successfully.");
+                                        
+                                        output = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="testCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Generic function to process failure data
+                                        var apiResponse = me.getPartsFailureData(); // Replace with actual service call
+                                        
+                                        // Ensure valid response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                            result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "FailureData",
+                                                dataShapeName: "FailureDataShape"
+                                            });
+                                           // return result;
+                                        }
+                                        
+                                        // Define generic column name (replace with actual field name)
+                                        var categoryColumn = "Category";  // Can be "ProductCategory", "City", "PartType", etc.
+                                        
+                                        // Initialize failure count object
+                                        var failureCounts = {};
+                                        
+                                        // Iterate through response data
+                                        apiResponse.value.forEach(function(item) {
+                                            var category = item[categoryColumn] || "Unknown"; // Handle missing categories
+                                            
+                                            if (failureCounts[category]) {
+                                                failureCounts[category]++;
+                                            } else {
+                                                failureCounts[category] = 1;
+                                            }
+                                        });
+                                        
+                                        // Create output InfoTable
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "FailureData",
+                                            dataShapeName: "FailureDataShape"
+                                        });
+                                        
+                                        // Populate InfoTable with data
+                                        Object.keys(failureCounts).forEach(function(category) {
+                                            var newEntry = result.AddRow({
+                                                Category: category,
+                                                FailureCount: failureCounts[category]
+                                            });
+                                        });
+                                        
+                                        // Log for debugging
+                                        logger.warn("Failure Data: " + JSON.stringify(result));
+                                        
+                                        // Return the processed InfoTable
+                                        result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="TopFailingParts">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable result
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "PartFailureDataShape" // Ensure this Data Shape is created
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data
+                                        var apiResponse = me.getPartsFailureData();
+                                        
+                                        // Validate response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                           // return; // No valid data, return an empty InfoTable
+                                        }
+                                        
+                                        // Initialize part failure counter
+                                        var partFailureCounts = {};
+                                        
+                                        // Iterate through data to count failures per part type
+                                        apiResponse.value.forEach(function(item) {
+                                            var partType = item.ExtLivPurePartDescription || "Unknown"; // Handle missing part names
+                                            
+                                            if (partFailureCounts[partType]) {
+                                                partFailureCounts[partType]++;
+                                            } else {
+                                                partFailureCounts[partType] = 1;
+                                            }
+                                        });
+                                        
+                                        // Populate InfoTable with part failure counts
+                                        Object.keys(partFailureCounts).forEach(function(partType) {
+                                            var newRow = {
+                                                PartType: partType,
+                                                FailureCount: partFailureCounts[partType]
+                                            };
+                                            result.AddRow(newRow);
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Top Failing Parts InfoTable populated successfully.");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="WarrantyvsNon-WarrantyFailures">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Define the InfoTable structure
+                                        var params = {
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "WarrantyFailureDistributionDataShape" // Ensure DataShape exists
+                                        };
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // Fetch failure data
+                                        var apiResponse = me.getPartsFailureData(); // API call to get failure data
+                                        
+                                        // Validate API response
+                                        if (!apiResponse || !apiResponse.value || !Array.isArray(apiResponse.value)) {
+                                            logger.warn("Invalid response received: " + JSON.stringify(apiResponse));
+                                           // return result; // Return empty InfoTable
+                                        }
+                                        
+                                        // Initialize warranty counters
+                                        var warrantyCount = 0;
+                                        var nonWarrantyCount = 0;
+                                        
+                                        // Process data and categorize failures
+                                        apiResponse.value.forEach(function(item) {
+                                            var warrantyStatus = item.ComLivpureWarranty; // Extract warranty field
+                                        
+                                            // Ensure proper value (convert to lowercase for consistency)
+                                            if (warrantyStatus) {
+                                                var normalizedStatus = warrantyStatus.toString().trim().toLowerCase();
+                                        
+                                                if (normalizedStatus === "warranty") {
+                                                    warrantyCount++;
+                                                } else {
+                                                    nonWarrantyCount++;
+                                                }
+                                            } else {
+                                                nonWarrantyCount++; // Treat missing values as Non-Warranty
+                                            }
+                                        });
+                                        
+                                        // Add Warranty row
+                                        result.AddRow({
+                                            FailureCategory: "Warranty",
+                                            FailureCount: parseInt(warrantyCount, 10)
+                                        });
+                                        
+                                        // Add Non-Warranty row
+                                        result.AddRow({
+                                            FailureCategory: "Non-Warranty",
+                                            FailureCount: parseInt(nonWarrantyCount, 10)
+                                        });
+                                        
+                                        // Debug log
+                                        logger.warn("Warranty vs. Non-Warranty failure data processed successfully.");
+                                        
+                                        output = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
