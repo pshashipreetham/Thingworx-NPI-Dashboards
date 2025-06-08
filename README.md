@@ -1,7 +1,6 @@
 # Thingworx-NPI-Dashboards
 A collection of modular ThingWorx dashboards for real-time visualization of engineering, project, and document-level data. These dashboards are designed to integrate with PLM systems (e.g., Windchill) and support advanced filtering, dynamic charts, document analytics, and status tracking.
 
----
 
 ## Dashboards Included
 
@@ -34,8 +33,6 @@ A collection of modular ThingWorx dashboards for real-time visualization of engi
   - Filtering by Product Category and Project Type
   - Real-time interaction with backend REST services
 
----
-
 ## Repository Contents
 
 - `Mashups/` — ThingWorx mashup XMLs
@@ -43,15 +40,11 @@ A collection of modular ThingWorx dashboards for real-time visualization of engi
 - `Deployment/` — Deployment guide and environment prerequisites
 - `Documentation/` — Functional test cases, technical logic, and unit testing notes
 
----
-
 ## Notes
 
 - This project is built for internal deployment and PLM integration.
 - Client-specific identifiers have been removed to comply with NDA.
 - For production use, ensure secure REST authentication and proper access controls in ThingWorx.
-
----
 
 ## Tags
 
