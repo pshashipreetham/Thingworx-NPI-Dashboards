@@ -3,7 +3,7 @@ A collection of modular ThingWorx dashboards for real-time visualization of engi
 
 ---
 
-## 📊 Dashboards Included
+## Dashboards Included
 
 ### 1. Parts Failure Dashboard
 - Visualizes part failure records by:
@@ -36,16 +36,7 @@ A collection of modular ThingWorx dashboards for real-time visualization of engi
 
 ---
 
-## 🔧 Tech Stack
-
-- **Platform:** PTC ThingWorx
-- **Backend:** ThingWorx Services, REST API Integration
-- **Frontend:** ThingWorx Mashups (Mashup Builder)
-- **Data Sources:** PLM system (e.g., Windchill), internal DataTables/InfoTables
-
----
-
-## 📁 Repository Contents
+## Repository Contents
 
 - `Mashups/` — ThingWorx mashup XMLs
 - `Services/` — Thing Services for querying, filtering, and data formatting
@@ -54,31 +45,7 @@ A collection of modular ThingWorx dashboards for real-time visualization of engi
 
 ---
 
-## 🚀 Deployment
-
-1. Export entities from ThingWorx DEV
-2. Import `Entities.xml` into the target environment (QA/PROD)
-3. Run sanity tests using included test case documents
-4. Commit changes to version control (if applicable)
-
-Detailed instructions available in `Deployment Document.docx`
-
----
-
-## 📄 Documentation Highlights
-
-- `Dashboard Documentation - Functional & Technical.docx`  
-  Describes service architecture, user flows, and feature-wise breakdown
-
-- `Dashboards_Unit Testing.docx`  
-  Unit testing checklist per dashboard feature and backend logic
-
-- `*_Test Cases.xlsx`  
-  End-user test scenarios for each dashboard (non-technical friendly format)
-
----
-
-## 🛡️ Notes
+## Notes
 
 - This project is built for internal deployment and PLM integration.
 - Client-specific identifiers have been removed to comply with NDA.
@@ -86,6 +53,6 @@ Detailed instructions available in `Deployment Document.docx`
 
 ---
 
-## 🔖 Tags
+## Tags
 
 `thingworx` `plm-dashboard` `windchill-integration` `iot-visualization` `project-tracking` `smart-manufacturing` `ptc` `mashup-development`
